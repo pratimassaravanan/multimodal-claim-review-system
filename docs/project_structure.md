@@ -33,6 +33,10 @@ multimodal-claim-review-system/
 │   ├── decision_matrix.md
 │   ├── pydantic_contracts_v2.md
 │   ├── project_structure.md           # This file
+│   ├── evaluation_metrics.md          # SINGLE SOURCE OF TRUTH for metrics
+│   ├── synthetic_generation_strategy.md  # Synthetic dataset category design
+│   ├── architecture_gate_review.md
+│   ├── implementation_readiness_review.md
 │   ├── architect_prompt.md
 │   └── ds/                            # Data Scientist Mode artifacts
 │       ├── label_analysis.md
@@ -253,7 +257,7 @@ Build bottom-up: contracts and rules before providers; providers before orchestr
 | **P6** | `modules/claim_decision_engine.py`, `severity_engine.py`, `supporting_image_selector.py`, `compose_claim_decision.py`, `assess_risk.py`, `explain.py`, `emit.py` | P3–P5 |
 | **P7** | `orchestration/pipeline.py` + `main.py` (mock providers only) | P5–P6 |
 | **P8** | `prompts/`, `providers/gemini_*.py`, wire M2a/M2b | P7 |
-| **P9** | `evaluation/`, `synthetic/fixtures/` | P7 |
+| **P9** | `evaluation/`, `synthetic/fixtures/` per [synthetic_generation_strategy.md](synthetic_generation_strategy.md) | P7 |
 | **P10** | `orchestration/batch_runner.py`, cache, rate limit, operational report | P8–P9 |
 
 ---
@@ -288,7 +292,7 @@ Build bottom-up: contracts and rules before providers; providers before orchestr
 | **E7** | Test inference | `claims.csv` | `output.csv` |
 | **E8** | Operational analysis | E7 run logs | Token/cost/latency in `evaluation_report.md` |
 
-Weighted score per [architecture_v2.md](architecture_v2.md) §6 and Data Scientist `class_balance.md`.
+Weighted score per [evaluation_metrics.md](evaluation_metrics.md) (canonical) and [class_balance.md](ds/class_balance.md).
 
 ---
 
@@ -581,4 +585,6 @@ flowchart TB
 | Rule logic | [decision_matrix.md](decision_matrix.md) |
 | Type definitions | [pydantic_contracts_v2.md](pydantic_contracts_v2.md) |
 | Where files go | **This document** |
-| Label / metric strategy | `docs/ds/` |
+| Label / metric strategy | `docs/ds/`, [evaluation_metrics.md](evaluation_metrics.md) |
+| Synthetic fixture categories | [synthetic_generation_strategy.md](synthetic_generation_strategy.md) |
+| Implementation gate status | [implementation_readiness_review.md](implementation_readiness_review.md) |
