@@ -6,6 +6,7 @@ import base64
 import json
 import mimetypes
 import os
+import ssl
 from pathlib import Path
 from typing import Any
 from urllib import error, request
@@ -16,6 +17,16 @@ from providers.exceptions import ProviderError, ProviderResponseError
 DEFAULT_GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 DEFAULT_TIMEOUT_SECONDS = 30.0
 DEFAULT_MAX_RETRIES = 3
+
+
+def _gemini_ssl_context() -> ssl.SSLContext:
+    ctx = ssl.create_default_context()
+    if hasattr(ssl, "VERIFY_X509_STRICT"):
+        ctx.verify_flags &= ~ssl.VERIFY_X509_STRICT
+    return ctx
+
+
+_GEMINI_SSL_CONTEXT = _gemini_ssl_context()
 
 
 class GeminiClient:
@@ -90,7 +101,9 @@ class GeminiClient:
             method="POST",
         )
         try:
-            with request.urlopen(req, timeout=self.timeout_seconds) as response:
+            with request.urlopen(
+                req, timeout=self.timeout_seconds, context=_GEMINI_SSL_CONTEXT
+            ) as response:
                 body = json.loads(response.read().decode("utf-8"))
         except error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")

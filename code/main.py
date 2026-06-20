@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
-import sys
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from pathlib import Path
 
 from orchestration.batch_runner import run_batch

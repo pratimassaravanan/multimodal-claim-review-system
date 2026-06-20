@@ -40,7 +40,7 @@
       "REQ_LAPTOP_BODY_HINGE_PORT"
     ],
     "pipeline_version": "1.0.0",
-    "observed_at": "2026-06-20T04:54:50.154969Z",
+    "observed_at": "2026-06-20T05:19:41.571144Z",
     "dataset_split": "test",
     "case_folder": "case_019"
   },
@@ -83,7 +83,7 @@
         "REQ_LAPTOP_BODY_HINGE_PORT"
       ],
       "pipeline_version": "1.0.0",
-      "observed_at": "2026-06-20T04:54:50.154969Z",
+      "observed_at": "2026-06-20T05:19:41.571144Z",
       "dataset_split": "test",
       "case_folder": "case_019"
     },
@@ -129,7 +129,7 @@
       "model_name": "mock-gemini-2.5-flash",
       "prompt_version": "mock-claim-v1",
       "observation_raw_hash": "sha256:5fe68f527522ee28a85f401b9b3d2b417a5269397adbf6e28d9ba3376580e657",
-      "observed_at": "2026-06-20T04:54:50.154969Z",
+      "observed_at": "2026-06-20T05:19:41.571144Z",
       "detected_languages": [
         "en"
       ],
@@ -141,39 +141,39 @@
         "row_id": "user_019:case_019",
         "image_id": "img_1",
         "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_019\\img_1.jpg",
-        "file_readable": true,
-        "usable_for_automated_review": true,
+        "file_readable": false,
+        "usable_for_automated_review": false,
         "depicts_claim_object": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_1"
         },
         "visible_part": {
-          "value": "screen",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_1"
         },
         "claimed_primary_part_visible": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_1"
         },
         "visible_issue_type": {
-          "value": "crack",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_1"
         },
         "visible_damage_extent": {
-          "value": "medium",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_1"
@@ -242,50 +242,50 @@
           "source_image_id": "img_1"
         },
         "vehicle_identity_features": [],
-        "model_name": "mock-gemini-2.5-pro",
-        "prompt_version": "mock-vision-v1",
-        "observed_at": "2026-06-20T04:54:50.154969Z",
+        "model_name": "fallback-image-observer",
+        "prompt_version": "fallback-v1",
+        "observed_at": "2026-06-20T05:19:41.571144Z",
         "observation_pass": 1,
-        "observation_raw_hash": "sha256:ddad715736bce79d05ef64794f46881c8f52ad22f9b4b142179a81d11422921f",
+        "observation_raw_hash": null,
         "injection_text_excerpt": null
       },
       {
         "row_id": "user_019:case_019",
         "image_id": "img_2",
         "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_019\\img_2.jpg",
-        "file_readable": true,
-        "usable_for_automated_review": true,
+        "file_readable": false,
+        "usable_for_automated_review": false,
         "depicts_claim_object": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_2"
         },
         "visible_part": {
-          "value": "screen",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_2"
         },
         "claimed_primary_part_visible": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_2"
         },
         "visible_issue_type": {
-          "value": "crack",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_2"
         },
         "visible_damage_extent": {
-          "value": "medium",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_2"
@@ -354,50 +354,50 @@
           "source_image_id": "img_2"
         },
         "vehicle_identity_features": [],
-        "model_name": "mock-gemini-2.5-pro",
-        "prompt_version": "mock-vision-v1",
-        "observed_at": "2026-06-20T04:54:50.154969Z",
+        "model_name": "fallback-image-observer",
+        "prompt_version": "fallback-v1",
+        "observed_at": "2026-06-20T05:19:41.571144Z",
         "observation_pass": 1,
-        "observation_raw_hash": "sha256:fce8d68328a2c5b37947183c120f520961b352a8607ad8642a29098c8664d76c",
+        "observation_raw_hash": null,
         "injection_text_excerpt": null
       },
       {
         "row_id": "user_019:case_019",
         "image_id": "img_3",
         "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_019\\img_3.jpg",
-        "file_readable": true,
-        "usable_for_automated_review": true,
+        "file_readable": false,
+        "usable_for_automated_review": false,
         "depicts_claim_object": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_3"
         },
         "visible_part": {
-          "value": "screen",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_3"
         },
         "claimed_primary_part_visible": {
-          "value": true,
-          "confidence": "high",
+          "value": false,
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_3"
         },
         "visible_issue_type": {
-          "value": "crack",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_3"
         },
         "visible_damage_extent": {
-          "value": "medium",
-          "confidence": "high",
+          "value": "unknown",
+          "confidence": "low",
           "confidence_score": null,
           "source_module": "image_observer",
           "source_image_id": "img_3"
@@ -466,16 +466,16 @@
           "source_image_id": "img_3"
         },
         "vehicle_identity_features": [],
-        "model_name": "mock-gemini-2.5-pro",
-        "prompt_version": "mock-vision-v1",
-        "observed_at": "2026-06-20T04:54:50.154969Z",
+        "model_name": "fallback-image-observer",
+        "prompt_version": "fallback-v1",
+        "observed_at": "2026-06-20T05:19:41.571144Z",
         "observation_pass": 1,
-        "observation_raw_hash": "sha256:57e828348e606bb2a9c8ca13e4bb697d540c2ca52891687c0ebdbe35839df4e8",
+        "observation_raw_hash": null,
         "injection_text_excerpt": null
       }
     ],
     "observation_complete": true,
-    "aggregated_at": "2026-06-20T04:54:50.154969Z"
+    "aggregated_at": "2026-06-20T05:19:41.571144Z"
   },
   "claim_observation": {
     "row_id": "user_019:case_019",
@@ -519,7 +519,7 @@
     "model_name": "mock-gemini-2.5-flash",
     "prompt_version": "mock-claim-v1",
     "observation_raw_hash": "sha256:5fe68f527522ee28a85f401b9b3d2b417a5269397adbf6e28d9ba3376580e657",
-    "observed_at": "2026-06-20T04:54:50.154969Z",
+    "observed_at": "2026-06-20T05:19:41.571144Z",
     "detected_languages": [
       "en"
     ],
@@ -541,7 +541,7 @@
     "part_visibility_scores": {
       "hinge": 0
     },
-    "resolved_at": "2026-06-20T04:54:50.154969Z"
+    "resolved_at": "2026-06-20T05:19:41.571144Z"
   },
   "consistency": {
     "row_id": "user_019:case_019",
@@ -550,19 +550,15 @@
     "identity_conflict_image_pairs": [],
     "wrong_object_set": false,
     "consistent_vehicle_features": true,
-    "best_part_image_ids": [
-      "img_1",
-      "img_2",
-      "img_3"
-    ],
-    "evaluated_at": "2026-06-20T04:54:50.154969Z",
+    "best_part_image_ids": [],
+    "evaluated_at": "2026-06-20T05:19:41.571144Z",
     "consistency_notes": null
   },
   "validation": {
     "row_id": "user_019:case_019",
-    "evidence_standard_met": true,
-    "triggered_rule_id": "ESM-R08",
-    "reason_template_key": "esm_r08_default_met",
+    "evidence_standard_met": false,
+    "triggered_rule_id": "ESM-R01",
+    "reason_template_key": "esm_r01_unreadable_file",
     "reason_template_vars": {
       "part": "hinge"
     },
@@ -573,147 +569,171 @@
       "REQ_GENERAL_MULTI_IMAGE"
     ],
     "requirements_satisfied": {
-      "REQ_GENERAL_OBJECT_PART": true,
-      "REQ_REVIEW_TRUST": true,
-      "REQ_LAPTOP_BODY_HINGE_PORT": true,
-      "REQ_GENERAL_MULTI_IMAGE": true
+      "REQ_GENERAL_OBJECT_PART": false,
+      "REQ_REVIEW_TRUST": false,
+      "REQ_LAPTOP_BODY_HINGE_PORT": false,
+      "REQ_GENERAL_MULTI_IMAGE": false
     },
     "predicates": {
-      "part_clear": true,
-      "no_part_visible": false,
+      "part_clear": false,
+      "no_part_visible": true,
       "part_visible_low_only": false,
       "identity_conflict": false,
       "contents_claim": false,
       "contents_area_clear": false,
-      "any_file_unreadable": false,
-      "best_part_confidence": "high",
-      "best_part_image_ids": [
-        "img_1",
-        "img_2",
-        "img_3"
-      ]
+      "any_file_unreadable": true,
+      "best_part_confidence": "low",
+      "best_part_image_ids": []
     },
-    "evaluated_at": "2026-06-20T04:54:50.154969Z",
+    "evaluated_at": "2026-06-20T05:19:41.571144Z",
     "identity_match_detail": null
   },
   "trust": {
     "row_id": "user_019:case_019",
-    "valid_image": true,
-    "triggered_rule_id": "VI-R04",
-    "all_images_unusable": false,
+    "valid_image": false,
+    "triggered_rule_id": "VI-R01",
+    "all_images_unusable": true,
     "any_non_original_high": false,
     "contents_unreviewable": false,
     "trust_failure_image_ids": [],
-    "evaluated_at": "2026-06-20T04:54:50.154969Z",
-    "trust_failure_reason": null
+    "evaluated_at": "2026-06-20T05:19:41.571144Z",
+    "trust_failure_reason": "All images unusable for automated review."
   },
   "verdict": {
     "row_id": "user_019:case_019",
-    "claim_status": "contradicted",
-    "claim_status_rule_id": "CS-R04",
-    "issue_type": "crack",
-    "object_part": "screen",
-    "decided_at": "2026-06-20T04:54:50.154969Z",
-    "contradiction_subtype": "wrong_part"
+    "claim_status": "not_enough_information",
+    "claim_status_rule_id": "CS-R01",
+    "issue_type": "unknown",
+    "object_part": "unknown",
+    "decided_at": "2026-06-20T05:19:41.571144Z",
+    "contradiction_subtype": null
   },
   "severity_decision": {
     "row_id": "user_019:case_019",
-    "severity": "medium",
-    "severity_rule_id": "SV-R05",
-    "visible_damage_extent_source": "medium",
-    "source_image_id": "img_3",
-    "verdict_ref": "user_019:case_019:verdict:2026-06-20T04:54:50.154969+00:00",
-    "decided_at": "2026-06-20T04:54:50.154969Z"
+    "severity": "unknown",
+    "severity_rule_id": "SV-R01",
+    "visible_damage_extent_source": "unknown",
+    "source_image_id": null,
+    "verdict_ref": "user_019:case_019:verdict:2026-06-20T05:19:41.571144+00:00",
+    "decided_at": "2026-06-20T05:19:41.571144Z"
   },
   "supporting_decision": {
     "row_id": "user_019:case_019",
-    "supporting_image_ids": [
-      "img_3"
-    ],
-    "supporting_image_rule_id": "SI-R05",
+    "supporting_image_ids": [],
+    "supporting_image_rule_id": "SI-R02",
     "excluded_image_ids": [],
-    "selection_rationale": "Image proves contradiction against claimed part or damage",
-    "verdict_ref": "user_019:case_019:verdict:2026-06-20T04:54:50.154969+00:00",
-    "decided_at": "2026-06-20T04:54:50.154969Z"
+    "selection_rationale": "Provider failure forced NEI: claim_observer: $.detected_languages is required; image_observer:img_1: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 13.151111473s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n; image_observer:img_2: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 11.577143429s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n; image_observer:img_3: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 9.313094801s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"9s\"\n      }\n    ]\n  }\n}\n",
+    "verdict_ref": "user_019:case_019:verdict:2026-06-20T05:19:41.571144+00:00",
+    "decided_at": "2026-06-20T05:19:41.571144Z"
   },
   "decision": {
     "row_id": "user_019:case_019",
     "verdict": {
       "row_id": "user_019:case_019",
-      "claim_status": "contradicted",
-      "claim_status_rule_id": "CS-R04",
-      "issue_type": "crack",
-      "object_part": "screen",
-      "decided_at": "2026-06-20T04:54:50.154969Z",
-      "contradiction_subtype": "wrong_part"
+      "claim_status": "not_enough_information",
+      "claim_status_rule_id": "CS-R01",
+      "issue_type": "unknown",
+      "object_part": "unknown",
+      "decided_at": "2026-06-20T05:19:41.571144Z",
+      "contradiction_subtype": null
     },
     "severity_decision": {
       "row_id": "user_019:case_019",
-      "severity": "medium",
-      "severity_rule_id": "SV-R05",
-      "visible_damage_extent_source": "medium",
-      "source_image_id": "img_3",
-      "verdict_ref": "user_019:case_019:verdict:2026-06-20T04:54:50.154969+00:00",
-      "decided_at": "2026-06-20T04:54:50.154969Z"
+      "severity": "unknown",
+      "severity_rule_id": "SV-R01",
+      "visible_damage_extent_source": "unknown",
+      "source_image_id": null,
+      "verdict_ref": "user_019:case_019:verdict:2026-06-20T05:19:41.571144+00:00",
+      "decided_at": "2026-06-20T05:19:41.571144Z"
     },
     "supporting_decision": {
       "row_id": "user_019:case_019",
-      "supporting_image_ids": [
-        "img_3"
-      ],
-      "supporting_image_rule_id": "SI-R05",
+      "supporting_image_ids": [],
+      "supporting_image_rule_id": "SI-R02",
       "excluded_image_ids": [],
-      "selection_rationale": "Image proves contradiction against claimed part or damage",
-      "verdict_ref": "user_019:case_019:verdict:2026-06-20T04:54:50.154969+00:00",
-      "decided_at": "2026-06-20T04:54:50.154969Z"
+      "selection_rationale": "Provider failure forced NEI: claim_observer: $.detected_languages is required; image_observer:img_1: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 13.151111473s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n; image_observer:img_2: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 11.577143429s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n; image_observer:img_3: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 9.313094801s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"9s\"\n      }\n    ]\n  }\n}\n",
+      "verdict_ref": "user_019:case_019:verdict:2026-06-20T05:19:41.571144+00:00",
+      "decided_at": "2026-06-20T05:19:41.571144Z"
     },
-    "evidence_standard_met": true,
-    "evidence_standard_met_reason": "The hinge is visible and the claimed condition can be verified from the submitted image.",
-    "valid_image": true,
-    "claim_status_justification": "The image evidence contradicts the claim based on img_3.",
-    "composed_at": "2026-06-20T04:54:50.154969Z"
+    "evidence_standard_met": false,
+    "evidence_standard_met_reason": "Automated observation failed: claim_observer: $.detected_languages is required; image_observer:img_1: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 13.151111473s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n; image_observer:img_2: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 11.577143429s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n; image_observer:img_3: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 9.313094801s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"9s\"\n      }\n    ]\n  }\n}\n",
+    "valid_image": false,
+    "claim_status_justification": "Claim could not be evaluated because observation failed: claim_observer: $.detected_languages is required; image_observer:img_1: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 13.151111473s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n; image_observer:img_2: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 11.577143429s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n; image_observer:img_3: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 9.313094801s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"9s\"\n      }\n    ]\n  }\n}\n",
+    "composed_at": "2026-06-20T05:19:41.571144Z"
   },
   "risk": {
     "row_id": "user_019:case_019",
     "risk_flags": [
-      "claim_mismatch",
-      "manual_review_required",
-      "wrong_object_part"
+      "damage_not_visible"
     ],
     "flag_rule_hits": [
       {
-        "flag": "wrong_object_part",
-        "rule_id": "wrong_object_part",
+        "flag": "damage_not_visible",
+        "rule_id": "damage_not_visible",
         "trigger_image_ids": [
           "img_3"
         ],
         "min_confidence_met": true
-      },
-      {
-        "flag": "claim_mismatch",
-        "rule_id": "claim_mismatch",
-        "trigger_image_ids": [],
-        "min_confidence_met": true
-      },
-      {
-        "flag": "manual_review_required",
-        "rule_id": "manual_review_required",
-        "trigger_image_ids": [],
-        "min_confidence_met": true
       }
     ],
-    "manual_review_required": true,
-    "manual_review_rule_ids": [
-      "MRR-4"
-    ],
+    "manual_review_required": false,
+    "manual_review_rule_ids": [],
     "history_flags_input": [
       "none"
     ],
-    "evaluated_at": "2026-06-20T04:54:50.154969Z"
+    "evaluated_at": "2026-06-20T05:19:41.571144Z"
   },
   "rule_hits_ordered": [
     {
       "sequence": 1,
+      "stage": "observe_claim",
+      "rule_id": "PROVIDER-FAILURE",
+      "matched": true,
+      "inputs_snapshot": {
+        "stage": "observe_claim"
+      },
+      "outputs_snapshot": {
+        "justification": "claim_observer: $.detected_languages is required"
+      }
+    },
+    {
+      "sequence": 2,
+      "stage": "observe_image",
+      "rule_id": "PROVIDER-FAILURE",
+      "matched": true,
+      "inputs_snapshot": {
+        "stage": "observe_image"
+      },
+      "outputs_snapshot": {
+        "justification": "image_observer:img_1: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 13.151111473s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n"
+      }
+    },
+    {
+      "sequence": 3,
+      "stage": "observe_image",
+      "rule_id": "PROVIDER-FAILURE",
+      "matched": true,
+      "inputs_snapshot": {
+        "stage": "observe_image"
+      },
+      "outputs_snapshot": {
+        "justification": "image_observer:img_2: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 11.577143429s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-2.5-pro\",\n              \"location\": \"global\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n"
+      }
+    },
+    {
+      "sequence": 4,
+      "stage": "observe_image",
+      "rule_id": "PROVIDER-FAILURE",
+      "matched": true,
+      "inputs_snapshot": {
+        "stage": "observe_image"
+      },
+      "outputs_snapshot": {
+        "justification": "image_observer:img_3: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 9.313094801s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          },\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerDay-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-pro\"\n            }\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"9s\"\n      }\n    ]\n  }\n}\n"
+      }
+    },
+    {
+      "sequence": 5,
       "stage": "resolve",
       "rule_id": "MP-1",
       "matched": true,
@@ -725,7 +745,7 @@
       }
     },
     {
-      "sequence": 2,
+      "sequence": 6,
       "stage": "resolve",
       "rule_id": "MP-2",
       "matched": true,
@@ -736,351 +756,154 @@
       }
     },
     {
-      "sequence": 3,
+      "sequence": 7,
       "stage": "validation",
       "rule_id": "ESM-R01",
-      "matched": false,
+      "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "any_file_unreadable": "false",
+        "any_file_unreadable": "true",
         "justification": "Unreadable file prevents evidence evaluation."
       }
     },
     {
-      "sequence": 4,
-      "stage": "validation",
-      "rule_id": "ESM-R02",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "identity_conflict": "false",
-        "justification": "Vehicle identity conflict across images."
-      }
-    },
-    {
-      "sequence": 5,
-      "stage": "validation",
-      "rule_id": "ESM-R03",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "no_part_visible": "false",
-        "justification": "Claimed part not visible on any image."
-      }
-    },
-    {
-      "sequence": 6,
-      "stage": "validation",
-      "rule_id": "ESM-R04",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "contents_claim": "false",
-        "contents_area_clear": "false",
-        "justification": "Contents claim without visible contents area."
-      }
-    },
-    {
-      "sequence": 7,
-      "stage": "validation",
-      "rule_id": "ESM-R05",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "part_visible_low_only": "false",
-        "justification": "Part visible only at low confidence without high-confidence image."
-      }
-    },
-    {
       "sequence": 8,
-      "stage": "validation",
-      "rule_id": "ESM-R06",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "part_clear": "true",
-        "justification": "Claimed primary part not clear enough for inspection."
-      }
-    },
-    {
-      "sequence": 9,
-      "stage": "validation",
-      "rule_id": "ESM-R07",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "identity_constraint_active": "false",
-        "identity_matchable": "true",
-        "detail": "identity_constraint_inactive",
-        "justification": "Identity constraint satisfied or not active."
-      }
-    },
-    {
-      "sequence": 10,
-      "stage": "validation",
-      "rule_id": "ESM-R08",
+      "stage": "trust",
+      "rule_id": "VI-R01",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "evidence_standard_met": "true",
-        "justification": "Default evidence sufficiency met; no higher-priority ESM rule matched."
-      }
-    },
-    {
-      "sequence": 11,
-      "stage": "trust",
-      "rule_id": "VI-R01",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "all_images_unusable": "false",
+        "all_images_unusable": "true",
         "justification": "All images unusable for automated review."
       }
     },
     {
-      "sequence": 12,
-      "stage": "trust",
-      "rule_id": "VI-R02",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "any_non_original_high": "false",
-        "justification": "Non-original image detected at high confidence."
-      }
-    },
-    {
-      "sequence": 13,
-      "stage": "trust",
-      "rule_id": "VI-R03",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "contents_unreviewable": "false",
-        "justification": "Contents reviewability check passed."
-      }
-    },
-    {
-      "sequence": 14,
-      "stage": "trust",
-      "rule_id": "VI-R04",
-      "matched": true,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "valid_image": "true",
-        "justification": "Default valid_image=true; no trust failure rule matched."
-      }
-    },
-    {
-      "sequence": 15,
+      "sequence": 9,
       "stage": "verdict",
       "rule_id": "CS-R01",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "evidence_standard_met": "true",
-        "justification": "Evidence standard met; CS-R01 does not apply."
-      }
-    },
-    {
-      "sequence": 16,
-      "stage": "verdict",
-      "rule_id": "CS-R02",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "wrong_object_set": "false",
-        "justification": "CS-R02 condition not met."
-      }
-    },
-    {
-      "sequence": 17,
-      "stage": "verdict",
-      "rule_id": "CS-R03",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "part_clear": "true",
-        "justification": "CS-R03 condition not met."
-      }
-    },
-    {
-      "sequence": 18,
-      "stage": "verdict",
-      "rule_id": "CS-R04",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "justification": "Visible part differs from claimed primary part."
+        "evidence_standard_met": "false",
+        "justification": "Evidence standard not met; claim status is not_enough_information."
       }
     },
     {
-      "sequence": 19,
+      "sequence": 10,
       "stage": "severity",
       "rule_id": "SV-R01",
-      "matched": false,
+      "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status": "contradicted",
-        "justification": "Claim status is not NEI."
+        "claim_status": "not_enough_information",
+        "justification": "Not enough information claim status maps severity to unknown."
       }
     },
     {
-      "sequence": 20,
+      "sequence": 11,
       "stage": "severity",
       "rule_id": "SV-R02",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "issue_type": "crack",
+        "issue_type": "unknown",
         "justification": "Issue type is not none or NEI preempts SV-R02."
       }
     },
     {
-      "sequence": 21,
+      "sequence": 12,
       "stage": "severity",
       "rule_id": "SV-R03",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "visible_damage_extent": "medium",
+        "visible_damage_extent": "unknown",
         "source_image_id": "img_3",
-        "justification": "Extent medium does not match high."
+        "justification": "Extent unknown does not match high."
       }
     },
     {
-      "sequence": 22,
+      "sequence": 13,
       "stage": "severity",
       "rule_id": "SV-R04",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "visible_damage_extent": "medium",
+        "visible_damage_extent": "unknown",
         "source_image_id": "img_3",
-        "justification": "Extent medium does not match low."
+        "justification": "Extent unknown does not match low."
       }
     },
     {
-      "sequence": 23,
+      "sequence": 14,
       "stage": "severity",
       "rule_id": "SV-R05",
-      "matched": true,
+      "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "visible_damage_extent": "medium",
+        "visible_damage_extent": "unknown",
         "source_image_id": "img_3",
-        "justification": "Visible damage extent medium on source image."
+        "justification": "Extent unknown does not match medium."
       }
     },
     {
-      "sequence": 24,
+      "sequence": 15,
       "stage": "severity",
       "rule_id": "SV-R06",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "visible_damage_extent": "medium",
+        "visible_damage_extent": "unknown",
         "source_image_id": "img_3",
-        "justification": "Extent medium does not match none."
+        "justification": "Extent unknown does not match none."
       }
     },
     {
-      "sequence": 25,
+      "sequence": 16,
       "stage": "severity",
       "rule_id": "SV-R07",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status": "contradicted",
-        "visible_damage_extent": "medium",
+        "claim_status": "not_enough_information",
+        "visible_damage_extent": "unknown",
         "justification": "SV-R07 requires supported status with unknown extent."
       }
     },
     {
-      "sequence": 26,
+      "sequence": 17,
       "stage": "severity",
       "rule_id": "SV-R08",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "visible_damage_extent": "medium",
+        "visible_damage_extent": "unknown",
         "justification": "SV-R08 conditions not met."
       }
     },
     {
-      "sequence": 27,
+      "sequence": 18,
       "stage": "supporting",
       "rule_id": "SI-R01",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "justification": "Claim status is not NEI."
+        "justification": "No identity conflict on NEI row."
       }
     },
     {
-      "sequence": 28,
+      "sequence": 19,
       "stage": "supporting",
       "rule_id": "SI-R02",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "justification": "Claim status is not NEI."
-      }
-    },
-    {
-      "sequence": 29,
-      "stage": "supporting",
-      "rule_id": "SI-R03",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "justification": "Contradicted claim; SI-R03 does not apply."
-      }
-    },
-    {
-      "sequence": 30,
-      "stage": "supporting",
-      "rule_id": "SI-R04",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "justification": "Contradicted claim; SI-R04 does not apply."
-      }
-    },
-    {
-      "sequence": 31,
-      "stage": "supporting",
-      "rule_id": "SI-R06",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "justification": "Not a wrong-object contradiction."
-      }
-    },
-    {
-      "sequence": 32,
-      "stage": "supporting",
-      "rule_id": "SI-R07",
-      "matched": false,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "part_visible_count": "3",
-        "justification": "SI-R07 requires CS-R03 with two or more part-visible images."
-      }
-    },
-    {
-      "sequence": 33,
-      "stage": "supporting",
-      "rule_id": "SI-R05",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status_rule_id": "CS-R04",
-        "selected": "img_3",
-        "justification": "Reference image proves part mismatch or absent damage contradiction."
+        "claim_status": "not_enough_information",
+        "justification": "NEI without identity conflict yields no supporting images."
       }
     },
     {
-      "sequence": 34,
+      "sequence": 20,
       "stage": "risk",
       "rule_id": "blurry_image",
       "matched": false,
@@ -1091,7 +914,7 @@
       }
     },
     {
-      "sequence": 35,
+      "sequence": 21,
       "stage": "risk",
       "rule_id": "cropped_or_obstructed",
       "matched": false,
@@ -1102,7 +925,7 @@
       }
     },
     {
-      "sequence": 36,
+      "sequence": 22,
       "stage": "risk",
       "rule_id": "low_light_or_glare",
       "matched": false,
@@ -1113,7 +936,7 @@
       }
     },
     {
-      "sequence": 37,
+      "sequence": 23,
       "stage": "risk",
       "rule_id": "wrong_angle",
       "matched": false,
@@ -1124,7 +947,7 @@
       }
     },
     {
-      "sequence": 38,
+      "sequence": 24,
       "stage": "risk",
       "rule_id": "wrong_object",
       "matched": false,
@@ -1136,42 +959,42 @@
       }
     },
     {
-      "sequence": 39,
+      "sequence": 25,
       "stage": "risk",
       "rule_id": "wrong_object_part",
-      "matched": true,
-      "inputs_snapshot": {},
-      "outputs_snapshot": {
-        "visible_part": "screen",
-        "primary_object_part": "hinge",
-        "justification": "Visible part differs from resolved primary part."
-      }
-    },
-    {
-      "sequence": 40,
-      "stage": "risk",
-      "rule_id": "damage_not_visible",
       "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "no_part_visible": "false",
-        "part_clear": "true",
-        "justification": "Damage visibility risk not triggered."
+        "visible_part": "unknown",
+        "primary_object_part": "hinge",
+        "justification": "Visible part aligns with primary part or part not clear."
       }
     },
     {
-      "sequence": 41,
+      "sequence": 26,
       "stage": "risk",
-      "rule_id": "claim_mismatch",
+      "rule_id": "damage_not_visible",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status_rule_id": "CS-R04",
-        "justification": "Contradicted claim with mismatching evidence."
+        "no_part_visible": "true",
+        "part_clear": "false",
+        "justification": "Claimed damage not visible on submitted images."
       }
     },
     {
-      "sequence": 42,
+      "sequence": 27,
+      "stage": "risk",
+      "rule_id": "claim_mismatch",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R01",
+        "justification": "Claim mismatch flag not triggered."
+      }
+    },
+    {
+      "sequence": 28,
       "stage": "risk",
       "rule_id": "non_original_image",
       "matched": false,
@@ -1182,7 +1005,7 @@
       }
     },
     {
-      "sequence": 43,
+      "sequence": 29,
       "stage": "risk",
       "rule_id": "possible_manipulation",
       "matched": false,
@@ -1193,7 +1016,7 @@
       }
     },
     {
-      "sequence": 44,
+      "sequence": 30,
       "stage": "risk",
       "rule_id": "text_instruction_present",
       "matched": false,
@@ -1204,7 +1027,7 @@
       }
     },
     {
-      "sequence": 45,
+      "sequence": 31,
       "stage": "risk",
       "rule_id": "user_history_risk",
       "matched": false,
@@ -1215,7 +1038,7 @@
       }
     },
     {
-      "sequence": 46,
+      "sequence": 32,
       "stage": "risk",
       "rule_id": "MRR-1",
       "matched": false,
@@ -1225,7 +1048,7 @@
       }
     },
     {
-      "sequence": 47,
+      "sequence": 33,
       "stage": "risk",
       "rule_id": "MRR-2",
       "matched": false,
@@ -1235,7 +1058,7 @@
       }
     },
     {
-      "sequence": 48,
+      "sequence": 34,
       "stage": "risk",
       "rule_id": "MRR-3",
       "matched": false,
@@ -1245,17 +1068,17 @@
       }
     },
     {
-      "sequence": 49,
+      "sequence": 35,
       "stage": "risk",
       "rule_id": "MRR-4",
-      "matched": true,
+      "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "justification": "MRR-4 manual review trigger matched."
+        "justification": "MRR-4 not matched."
       }
     },
     {
-      "sequence": 50,
+      "sequence": 36,
       "stage": "risk",
       "rule_id": "MRR-5",
       "matched": false,
@@ -1265,7 +1088,7 @@
       }
     },
     {
-      "sequence": 51,
+      "sequence": 37,
       "stage": "risk",
       "rule_id": "MRR-6",
       "matched": false,
@@ -1275,78 +1098,78 @@
       }
     },
     {
-      "sequence": 52,
+      "sequence": 38,
       "stage": "risk",
       "rule_id": "manual_review_required",
-      "matched": true,
+      "matched": false,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "manual_review_rule_ids": "MRR-4",
-        "justification": "Composite manual review required."
+        "manual_review_rule_ids": "none",
+        "justification": "Manual review not required."
       }
     },
     {
-      "sequence": 53,
+      "sequence": 39,
       "stage": "compose",
       "rule_id": "CMP-HR01",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status": "contradicted",
-        "evidence_standard_met": "true",
+        "claim_status": "not_enough_information",
+        "evidence_standard_met": "false",
         "justification": "HR-01 evidence standard and claim status are consistent."
       }
     },
     {
-      "sequence": 54,
+      "sequence": 40,
       "stage": "compose",
       "rule_id": "CMP-HR03",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "severity": "medium",
+        "severity": "unknown",
         "justification": "HR-03 NEI severity consistency satisfied."
       }
     },
     {
-      "sequence": 55,
+      "sequence": 41,
       "stage": "compose",
       "rule_id": "CMP-SV02",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "issue_type": "crack",
+        "issue_type": "unknown",
         "justification": "SV-02 issue_type none requires severity none."
       }
     },
     {
-      "sequence": 56,
+      "sequence": 42,
       "stage": "compose",
       "rule_id": "CMP-RISK01",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
-        "claim_status": "contradicted",
-        "risk_flag_count": "3",
+        "claim_status": "not_enough_information",
+        "risk_flag_count": "1",
         "justification": "Risk assessment did not modify verdict claim_status."
       }
     },
     {
-      "sequence": 57,
+      "sequence": 43,
       "stage": "compose",
       "rule_id": "CMP-COMPOSE",
       "matched": true,
       "inputs_snapshot": {},
       "outputs_snapshot": {
         "row_id": "user_019:case_019",
-        "reason_key": "esm_r08_default_met",
+        "reason_key": "esm_r01_unreadable_file",
         "justification": "ClaimDecision composed from stage outputs."
       }
     }
   ],
-  "started_at": "2026-06-20T04:54:50.154969Z",
-  "completed_at": "2026-06-20T04:54:50.154969Z",
-  "deterministic_hash": "sha256:7dbdfedddb5ef66fee341e4396d3244ba8b458c763f4cdcedbdd41f60cebcb24",
+  "started_at": "2026-06-20T05:19:41.571144Z",
+  "completed_at": "2026-06-20T05:19:41.571144Z",
+  "deterministic_hash": "sha256:066a326ccf5395f2ec79022e1596e07d2d3d9027bd6e3987a1ad190ddf83a10a",
   "model_call_counts": {
     "claim_observer": 1,
     "image_observer": 3
