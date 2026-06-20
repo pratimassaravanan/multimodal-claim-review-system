@@ -1,53 +1,22 @@
-"""Reusable derived predicates from decision_matrix §0.5.
-
-Each predicate:
-- has a stable ``predicate_id`` (PRED-*)
-- is independently testable
-- returns traceable ``outputs`` for DecisionTrace snapshots
-"""
+"""Reusable derived predicates from decision_matrix §0.5."""
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import Callable
-
-from pydantic import BaseModel, Field
 
 from contracts.enums import ClaimObject, IssueFamily
 from contracts.intake import ClaimContext
 from contracts.observation import ImageEvidence
 from contracts.primitives import ConfidenceLevel
 from contracts.resolution import ClaimResolutionContext
-
-CONFIDENCE_RANK: dict[ConfidenceLevel, int] = {"low": 1, "medium": 2, "high": 3}
-
-
-class PredicatesSnapshot(BaseModel):
-    """Aggregate of all §0.5 predicates for downstream rule matrices."""
-
-    image_count: int = Field(ge=0)
-    any_file_unreadable: bool
-    best_part_confidence: ConfidenceLevel
-    best_part_image_ids: list[str]
-    part_clear: bool
-    part_visible_low_only: bool
-    no_part_visible: bool
-    identity_conflict: bool
-    wrong_object_set: bool
-    any_non_original_high: bool
-    contents_claim: bool
-    contents_area_clear: bool
-    all_images_unusable: bool
-
-    model_config = {"frozen": True}
-
-
-@dataclass(frozen=True)
-class PredicateResult:
-    predicate_id: str
-    value: bool | int | str | list[str]
-    outputs: dict[str, str]
-
+from rules.confidence import CONFIDENCE_RANK, confidence_at_least
+from rules.identity_helpers import images_conflict_on_identity
+from rules.types import (
+    PredicateTraceRecord,
+    PredicatesEvaluationBundle,
+    PredicatesSnapshot,
+    TraceField,
+)
 
 PREDICATE_IDS = (
     "PRED-IMAGE-COUNT",
@@ -66,260 +35,248 @@ PREDICATE_IDS = (
 )
 
 
-def confidence_at_least(level: ConfidenceLevel, minimum: ConfidenceLevel) -> bool:
-    return CONFIDENCE_RANK[level] >= CONFIDENCE_RANK[minimum]
-
-
-def _confidence_at_least(level: ConfidenceLevel, minimum: ConfidenceLevel) -> bool:
-    return confidence_at_least(level, minimum)
-
-
 def _part_confidence(image: ImageEvidence) -> ConfidenceLevel:
     return image.claimed_primary_part_visible.confidence
 
 
-def compute_image_count(images: list[ImageEvidence]) -> PredicateResult:
-    count = len(images)
-    return PredicateResult(
-        predicate_id="PRED-IMAGE-COUNT",
-        value=count,
-        outputs={"image_count": str(count)},
+def _fields(*pairs: tuple[str, str]) -> list[TraceField]:
+    return [TraceField(key=key, value=value) for key, value in pairs]
+
+
+def _record(
+    predicate_id: str,
+    outcome: bool,
+    value_text: str,
+    justification: str,
+    *pairs: tuple[str, str],
+) -> PredicateTraceRecord:
+    return PredicateTraceRecord(
+        predicate_id=predicate_id,
+        outcome=outcome,
+        value_text=value_text,
+        justification=justification,
+        trace_fields=_fields(*pairs),
     )
 
 
-def compute_any_file_unreadable(images: list[ImageEvidence]) -> PredicateResult:
+def compute_image_count(images: list[ImageEvidence]) -> PredicateTraceRecord:
+    count = len(images)
+    return _record(
+        "PRED-IMAGE-COUNT",
+        True,
+        str(count),
+        f"Row contains {count} image(s).",
+        ("image_count", str(count)),
+    )
+
+
+def compute_any_file_unreadable(images: list[ImageEvidence]) -> PredicateTraceRecord:
     unreadable = [img.image_id for img in images if not img.file_readable]
     value = len(unreadable) > 0
-    return PredicateResult(
-        predicate_id="PRED-ANY-FILE-UNREADABLE",
-        value=value,
-        outputs={
-            "any_file_unreadable": str(value).lower(),
-            "unreadable_image_ids": ",".join(unreadable) if unreadable else "none",
-        },
+    return _record(
+        "PRED-ANY-FILE-UNREADABLE",
+        value,
+        str(value).lower(),
+        "At least one file is unreadable." if value else "All files are readable.",
+        ("any_file_unreadable", str(value).lower()),
+        ("unreadable_image_ids", ",".join(unreadable) if unreadable else "none"),
     )
 
 
-def compute_best_part_confidence(images: list[ImageEvidence]) -> PredicateResult:
+def compute_best_part_confidence(images: list[ImageEvidence]) -> PredicateTraceRecord:
     if not images:
         best: ConfidenceLevel = "low"
     else:
         best = max((_part_confidence(img) for img in images), key=lambda c: CONFIDENCE_RANK[c])
-    return PredicateResult(
-        predicate_id="PRED-BEST-PART-CONFIDENCE",
-        value=best,
-        outputs={"best_part_confidence": best},
+    return _record(
+        "PRED-BEST-PART-CONFIDENCE",
+        True,
+        best,
+        f"Best claimed-primary-part confidence across images is {best}.",
+        ("best_part_confidence", best),
     )
 
 
-def compute_best_part_image_set(images: list[ImageEvidence]) -> PredicateResult:
-    best_result = compute_best_part_confidence(images)
-    best = best_result.value
-    assert isinstance(best, str)
+def compute_best_part_image_set(images: list[ImageEvidence]) -> PredicateTraceRecord:
+    best = compute_best_part_confidence(images).value_text
     image_ids = [
         img.image_id
         for img in images
-        if _part_confidence(img) == best and _confidence_at_least(_part_confidence(img), "medium")
+        if _part_confidence(img) == best and confidence_at_least(_part_confidence(img), "medium")
     ]
-    return PredicateResult(
-        predicate_id="PRED-BEST-PART-IMAGE-SET",
-        value=image_ids,
-        outputs={
-            "best_part_confidence": best,
-            "best_part_image_ids": ",".join(image_ids) if image_ids else "none",
-        },
+    return _record(
+        "PRED-BEST-PART-IMAGE-SET",
+        bool(image_ids),
+        ",".join(image_ids) if image_ids else "none",
+        "Images at best part confidence with medium or higher visibility.",
+        ("best_part_confidence", best),
+        ("best_part_image_ids", ",".join(image_ids) if image_ids else "none"),
     )
 
 
-def compute_part_clear(images: list[ImageEvidence]) -> PredicateResult:
+def compute_part_clear(images: list[ImageEvidence]) -> PredicateTraceRecord:
     matching = [
         img.image_id
         for img in images
         if img.claimed_primary_part_visible.value
-        and _confidence_at_least(img.claimed_primary_part_visible.confidence, "medium")
+        and confidence_at_least(img.claimed_primary_part_visible.confidence, "medium")
     ]
     value = len(matching) > 0
-    return PredicateResult(
-        predicate_id="PRED-PART-CLEAR",
-        value=value,
-        outputs={
-            "part_clear": str(value).lower(),
-            "qualifying_image_ids": ",".join(matching) if matching else "none",
-        },
+    return _record(
+        "PRED-PART-CLEAR",
+        value,
+        str(value).lower(),
+        "Claimed primary part visible at medium or higher." if value else "No clear part visibility.",
+        ("part_clear", str(value).lower()),
+        ("qualifying_image_ids", ",".join(matching) if matching else "none"),
     )
 
 
-def compute_part_visible_low_only(images: list[ImageEvidence]) -> PredicateResult:
+def compute_part_visible_low_only(images: list[ImageEvidence]) -> PredicateTraceRecord:
     any_visible = any(img.claimed_primary_part_visible.value for img in images)
-    best = compute_best_part_confidence(images).value
-    assert isinstance(best, str)
+    best = compute_best_part_confidence(images).value_text
     value = any_visible and best == "low"
-    return PredicateResult(
-        predicate_id="PRED-PART-VISIBLE-LOW-ONLY",
-        value=value,
-        outputs={
-            "part_visible_low_only": str(value).lower(),
-            "best_part_confidence": best,
-        },
+    return _record(
+        "PRED-PART-VISIBLE-LOW-ONLY",
+        value,
+        str(value).lower(),
+        "Part visible only at low confidence." if value else "Part not limited to low confidence only.",
+        ("part_visible_low_only", str(value).lower()),
+        ("best_part_confidence", best),
     )
 
 
-def compute_no_part_visible(images: list[ImageEvidence]) -> PredicateResult:
-    value = all(
-        (not img.claimed_primary_part_visible.value)
-        or (_part_confidence(img) == "low")
-        for img in images
-    ) if images else True
-    return PredicateResult(
-        predicate_id="PRED-NO-PART-VISIBLE",
-        value=value,
-        outputs={"no_part_visible": str(value).lower()},
+def compute_no_part_visible(images: list[ImageEvidence]) -> PredicateTraceRecord:
+    value = (
+        all(
+            (not img.claimed_primary_part_visible.value)
+            or (_part_confidence(img) == "low")
+            for img in images
+        )
+        if images
+        else True
+    )
+    return _record(
+        "PRED-NO-PART-VISIBLE",
+        value,
+        str(value).lower(),
+        "No image shows the claimed part at medium or higher." if value else "Some image shows part visibility.",
+        ("no_part_visible", str(value).lower()),
     )
 
 
-def _parse_identity_features(features: list[str]) -> dict[str, str]:
-    parsed: dict[str, str] = {}
-    for token in features:
-        if ":" in token:
-            key, val = token.split(":", 1)
-            parsed[key.strip()] = val.strip()
-    return parsed
-
-
-def _images_conflict_on_identity(a: ImageEvidence, b: ImageEvidence) -> tuple[bool, list[str]]:
-    if not (
-        a.depicts_claim_object.value
-        and b.depicts_claim_object.value
-        and _confidence_at_least(a.depicts_claim_object.confidence, "medium")
-        and _confidence_at_least(b.depicts_claim_object.confidence, "medium")
-    ):
-        return False, []
-
-    fa = _parse_identity_features(a.vehicle_identity_features)
-    fb = _parse_identity_features(b.vehicle_identity_features)
-    conflicts: list[str] = []
-    for key in set(fa) & set(fb):
-        if fa[key] != fb[key]:
-            conflicts.append(f"{key}:{fa[key]} vs {key}:{fb[key]}")
-    if not conflicts:
-        return False, []
-    high_on_both = (
-        _confidence_at_least(a.depicts_claim_object.confidence, "high")
-        and _confidence_at_least(b.depicts_claim_object.confidence, "high")
-    )
-    return high_on_both, conflicts
-
-
-def compute_identity_conflict(claim_object: ClaimObject, images: list[ImageEvidence]) -> PredicateResult:
+def compute_identity_conflict(claim_object: ClaimObject, images: list[ImageEvidence]) -> PredicateTraceRecord:
     if claim_object is not ClaimObject.CAR or len(images) < 2:
-        return PredicateResult(
-            predicate_id="PRED-IDENTITY-CONFLICT",
-            value=False,
-            outputs={"identity_conflict": "false", "reason": "not_applicable"},
+        return _record(
+            "PRED-IDENTITY-CONFLICT",
+            False,
+            "false",
+            "Identity conflict predicate not applicable for this claim object or image count.",
+            ("identity_conflict", "false"),
+            ("reason", "not_applicable"),
         )
 
     for i in range(len(images)):
         for j in range(i + 1, len(images)):
-            conflict, details = _images_conflict_on_identity(images[i], images[j])
+            conflict, details = images_conflict_on_identity(images[i], images[j])
             if conflict:
-                return PredicateResult(
-                    predicate_id="PRED-IDENTITY-CONFLICT",
-                    value=True,
-                    outputs={
-                        "identity_conflict": "true",
-                        "image_id_a": images[i].image_id,
-                        "image_id_b": images[j].image_id,
-                        "conflicting_features": ";".join(details),
-                    },
+                return _record(
+                    "PRED-IDENTITY-CONFLICT",
+                    True,
+                    "true",
+                    "Conflicting vehicle identity features at high confidence.",
+                    ("identity_conflict", "true"),
+                    ("image_id_a", images[i].image_id),
+                    ("image_id_b", images[j].image_id),
+                    ("conflicting_features", ";".join(details)),
                 )
 
-    return PredicateResult(
-        predicate_id="PRED-IDENTITY-CONFLICT",
-        value=False,
-        outputs={"identity_conflict": "false"},
+    return _record(
+        "PRED-IDENTITY-CONFLICT",
+        False,
+        "false",
+        "No identity conflict detected across image pairs.",
+        ("identity_conflict", "false"),
     )
 
 
-def compute_wrong_object_set(images: list[ImageEvidence]) -> PredicateResult:
+def compute_wrong_object_set(images: list[ImageEvidence]) -> PredicateTraceRecord:
     medium_plus = [
-        img
-        for img in images
-        if _confidence_at_least(img.depicts_claim_object.confidence, "medium")
+        img for img in images if confidence_at_least(img.depicts_claim_object.confidence, "medium")
     ]
-    if not medium_plus:
-        value = False
-    else:
-        value = all(not img.depicts_claim_object.value for img in medium_plus)
-    return PredicateResult(
-        predicate_id="PRED-WRONG-OBJECT-SET",
-        value=value,
-        outputs={
-            "wrong_object_set": str(value).lower(),
-            "medium_plus_image_count": str(len(medium_plus)),
-        },
+    value = bool(medium_plus) and all(not img.depicts_claim_object.value for img in medium_plus)
+    return _record(
+        "PRED-WRONG-OBJECT-SET",
+        value,
+        str(value).lower(),
+        "All medium-plus images depict a non-claim object." if value else "Claim object depicted on at least one image.",
+        ("wrong_object_set", str(value).lower()),
+        ("medium_plus_image_count", str(len(medium_plus))),
     )
 
 
-def compute_any_non_original_high(images: list[ImageEvidence]) -> PredicateResult:
+def compute_any_non_original_high(images: list[ImageEvidence]) -> PredicateTraceRecord:
     hits = [
         img.image_id
         for img in images
         if img.is_non_original_image.value
-        and _confidence_at_least(img.is_non_original_image.confidence, "high")
+        and confidence_at_least(img.is_non_original_image.confidence, "high")
     ]
     value = len(hits) > 0
-    return PredicateResult(
-        predicate_id="PRED-ANY-NON-ORIGINAL-HIGH",
-        value=value,
-        outputs={
-            "any_non_original_high": str(value).lower(),
-            "image_ids": ",".join(hits) if hits else "none",
-        },
+    return _record(
+        "PRED-ANY-NON-ORIGINAL-HIGH",
+        value,
+        str(value).lower(),
+        "Non-original image detected at high confidence." if value else "No high-confidence non-original image.",
+        ("any_non_original_high", str(value).lower()),
+        ("image_ids", ",".join(hits) if hits else "none"),
     )
 
 
-def compute_contents_claim(resolution: ClaimResolutionContext) -> PredicateResult:
+def compute_contents_claim(resolution: ClaimResolutionContext) -> PredicateTraceRecord:
     value = resolution.primary_issue_family is IssueFamily.CONTENTS_OR_ITEM
-    return PredicateResult(
-        predicate_id="PRED-CONTENTS-CLAIM",
-        value=value,
-        outputs={
-            "contents_claim": str(value).lower(),
-            "primary_issue_family": resolution.primary_issue_family.value,
-        },
+    return _record(
+        "PRED-CONTENTS-CLAIM",
+        value,
+        str(value).lower(),
+        "Primary issue family is contents_or_item." if value else "Primary issue family is not contents_or_item.",
+        ("contents_claim", str(value).lower()),
+        ("primary_issue_family", resolution.primary_issue_family.value),
     )
 
 
-def compute_contents_area_clear(images: list[ImageEvidence]) -> PredicateResult:
+def compute_contents_area_clear(images: list[ImageEvidence]) -> PredicateTraceRecord:
     qualifying = [
         img.image_id
         for img in images
         if img.package_is_opened.value
         and img.contents_area_visible.value
-        and _confidence_at_least(img.package_is_opened.confidence, "medium")
-        and _confidence_at_least(img.contents_area_visible.confidence, "medium")
+        and confidence_at_least(img.package_is_opened.confidence, "medium")
+        and confidence_at_least(img.contents_area_visible.confidence, "medium")
     ]
     value = len(qualifying) > 0
-    return PredicateResult(
-        predicate_id="PRED-CONTENTS-AREA-CLEAR",
-        value=value,
-        outputs={
-            "contents_area_clear": str(value).lower(),
-            "qualifying_image_ids": ",".join(qualifying) if qualifying else "none",
-        },
+    return _record(
+        "PRED-CONTENTS-AREA-CLEAR",
+        value,
+        str(value).lower(),
+        "Opened package with visible contents area." if value else "Contents area not clearly visible.",
+        ("contents_area_clear", str(value).lower()),
+        ("qualifying_image_ids", ",".join(qualifying) if qualifying else "none"),
     )
 
 
-def compute_all_images_unusable(images: list[ImageEvidence]) -> PredicateResult:
+def compute_all_images_unusable(images: list[ImageEvidence]) -> PredicateTraceRecord:
     value = bool(images) and all(not img.usable_for_automated_review for img in images)
-    return PredicateResult(
-        predicate_id="PRED-ALL-IMAGES-UNUSABLE",
-        value=value,
-        outputs={"all_images_unusable": str(value).lower()},
+    return _record(
+        "PRED-ALL-IMAGES-UNUSABLE",
+        value,
+        str(value).lower(),
+        "Every image is unusable for automated review." if value else "At least one image is usable.",
+        ("all_images_unusable", str(value).lower()),
     )
 
 
-_PREDICATE_REGISTRY: dict[str, Callable[..., PredicateResult]] = {
+_PREDICATE_REGISTRY: dict[str, Callable[..., PredicateTraceRecord]] = {
     "PRED-IMAGE-COUNT": compute_image_count,
     "PRED-ANY-FILE-UNREADABLE": compute_any_file_unreadable,
     "PRED-BEST-PART-CONFIDENCE": compute_best_part_confidence,
@@ -342,8 +299,7 @@ def compute_predicate(
     claim: ClaimContext | None = None,
     images: list[ImageEvidence] | None = None,
     resolution: ClaimResolutionContext | None = None,
-) -> PredicateResult:
-    """Evaluate a single predicate by ID."""
+) -> PredicateTraceRecord:
     if predicate_id not in _PREDICATE_REGISTRY:
         raise KeyError(f"Unknown predicate_id: {predicate_id}")
 
@@ -357,17 +313,15 @@ def compute_predicate(
             raise ValueError("resolution is required for PRED-CONTENTS-CLAIM")
         return compute_contents_claim(resolution)
 
-    fn = _PREDICATE_REGISTRY[predicate_id]
-    return fn(images)
+    return _PREDICATE_REGISTRY[predicate_id](images)
 
 
 def compute_all_predicates(
     claim: ClaimContext,
     images: list[ImageEvidence],
     resolution: ClaimResolutionContext,
-) -> tuple[PredicatesSnapshot, list[PredicateResult]]:
-    """Compute all §0.5 predicates and return snapshot + traceable results."""
-    results: list[PredicateResult] = [
+) -> PredicatesEvaluationBundle:
+    records = [
         compute_image_count(images),
         compute_any_file_unreadable(images),
         compute_best_part_confidence(images),
@@ -383,24 +337,21 @@ def compute_all_predicates(
         compute_all_images_unusable(images),
     ]
 
-    best_conf = results[2].value
-    assert isinstance(best_conf, str)
-    best_ids = results[3].value
-    assert isinstance(best_ids, list)
-
     snapshot = PredicatesSnapshot(
         image_count=len(images),
-        any_file_unreadable=bool(results[1].value),
-        best_part_confidence=best_conf,  # type: ignore[arg-type]
-        best_part_image_ids=best_ids,
-        part_clear=bool(results[4].value),
-        part_visible_low_only=bool(results[5].value),
-        no_part_visible=bool(results[6].value),
-        identity_conflict=bool(results[7].value),
-        wrong_object_set=bool(results[8].value),
-        any_non_original_high=bool(results[9].value),
-        contents_claim=bool(results[10].value),
-        contents_area_clear=bool(results[11].value),
-        all_images_unusable=bool(results[12].value),
+        any_file_unreadable=records[1].outcome,
+        best_part_confidence=records[2].value_text,  # type: ignore[arg-type]
+        best_part_image_ids=(
+            records[3].value_text.split(",") if records[3].value_text != "none" else []
+        ),
+        part_clear=records[4].outcome,
+        part_visible_low_only=records[5].outcome,
+        no_part_visible=records[6].outcome,
+        identity_conflict=records[7].outcome,
+        wrong_object_set=records[8].outcome,
+        any_non_original_high=records[9].outcome,
+        contents_claim=records[10].outcome,
+        contents_area_clear=records[11].outcome,
+        all_images_unusable=records[12].outcome,
     )
-    return snapshot, results
+    return PredicatesEvaluationBundle(snapshot=snapshot, records=records)

@@ -1,8 +1,4 @@
-"""Evidence requirement catalog and active-requirement resolution.
-
-Maps ``dataset/evidence_requirements.csv`` and decision_matrix §0.3 / §1.2.
-No verdict, severity, or risk logic.
-"""
+"""Evidence requirement catalog and active-requirement resolution."""
 
 from __future__ import annotations
 
@@ -20,7 +16,13 @@ from ontology.issue_families import (
     MULTI_IMAGE_REQUIREMENT_ID,
     UNIVERSAL_REQUIREMENT_IDS,
 )
-from rules.predicates import PredicatesSnapshot, confidence_at_least
+from rules.confidence import confidence_at_least
+from rules.types import (
+    PredicatesSnapshot,
+    RequirementEvaluationBundle,
+    RequirementEvaluationResult,
+    TraceField,
+)
 
 
 class RequirementSpec(BaseModel):
@@ -32,7 +34,6 @@ class RequirementSpec(BaseModel):
     model_config = {"frozen": True}
 
 
-# Canonical catalog — mirrors dataset/evidence_requirements.csv
 REQUIREMENTS_CATALOG: dict[str, RequirementSpec] = {
     "REQ_GENERAL_OBJECT_PART": RequirementSpec(
         requirement_id="REQ_GENERAL_OBJECT_PART",
@@ -136,8 +137,23 @@ REQUIREMENTS_CATALOG: dict[str, RequirementSpec] = {
 }
 
 
+def _result(
+    requirement_id: str,
+    satisfied: bool,
+    predicate_ref: str,
+    justification: str,
+    *pairs: tuple[str, str],
+) -> RequirementEvaluationResult:
+    return RequirementEvaluationResult(
+        requirement_id=requirement_id,
+        satisfied=satisfied,
+        predicate_ref=predicate_ref,
+        justification=justification,
+        trace_fields=[TraceField(key=k, value=v) for k, v in pairs],
+    )
+
+
 def load_requirements_catalog(csv_path: Path | str) -> dict[str, RequirementSpec]:
-    """Load requirement specs from evidence_requirements.csv for validation/sync."""
     path = Path(csv_path)
     catalog: dict[str, RequirementSpec] = {}
     with path.open(newline="", encoding="utf-8") as handle:
@@ -160,7 +176,6 @@ def build_active_requirement_ids(
     image_count: int,
     identity_constraint_active: bool,
 ) -> list[str]:
-    """Return ordered active requirement IDs per decision_matrix §0.3."""
     active: list[str] = list(UNIVERSAL_REQUIREMENT_IDS)
 
     family_reqs = FAMILY_REQUIREMENT_IDS.get(primary_issue_family, ())
@@ -183,19 +198,26 @@ def evaluate_requirement_satisfaction(
     requirement_id: str,
     predicates: PredicatesSnapshot,
     images: list[ImageEvidence],
-) -> tuple[bool, dict[str, str]]:
-    """Evaluate whether a single requirement is satisfied (decision_matrix §1.2)."""
-    outputs: dict[str, str] = {"requirement_id": requirement_id}
-
+) -> RequirementEvaluationResult:
     if requirement_id == "REQ_GENERAL_OBJECT_PART":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
+        return _result(
+            requirement_id,
+            predicates.part_clear,
+            "PRED-PART-CLEAR",
+            "General object part requirement satisfied when PART_CLEAR is true.",
+            ("part_clear", str(predicates.part_clear).lower()),
+        )
 
     if requirement_id == "REQ_GENERAL_MULTI_IMAGE":
         satisfied = predicates.image_count < 2 or bool(predicates.best_part_image_ids)
-        outputs["predicate"] = "PRED-BEST-PART-IMAGE-SET"
-        outputs["image_count"] = str(predicates.image_count)
-        return satisfied, outputs
+        return _result(
+            requirement_id,
+            satisfied,
+            "PRED-BEST-PART-IMAGE-SET",
+            "Multi-image requirement satisfied when a best-part image exists or only one image submitted.",
+            ("image_count", str(predicates.image_count)),
+            ("best_part_image_ids", ",".join(predicates.best_part_image_ids) or "none"),
+        )
 
     if requirement_id == "REQ_REVIEW_TRUST":
         qualifying = [
@@ -206,55 +228,60 @@ def evaluate_requirement_satisfaction(
             and confidence_at_least(img.depicts_claim_object.confidence, "medium")
         ]
         satisfied = len(qualifying) > 0
-        outputs["predicate"] = "depicts_claim_object>=medium"
-        outputs["qualifying_image_ids"] = ",".join(qualifying) if qualifying else "none"
-        return satisfied, outputs
+        return _result(
+            requirement_id,
+            satisfied,
+            "depicts_claim_object>=medium",
+            "Review trust requires usable image depicting claim object at medium or higher.",
+            ("qualifying_image_ids", ",".join(qualifying) if qualifying else "none"),
+        )
 
-    if requirement_id == "REQ_CAR_BODY_PANEL":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
-
-    if requirement_id == "REQ_CAR_GLASS_LIGHT_MIRROR":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
+    if requirement_id in {
+        "REQ_CAR_BODY_PANEL",
+        "REQ_CAR_GLASS_LIGHT_MIRROR",
+        "REQ_LAPTOP_SCREEN_KEYBOARD_TRACKPAD",
+        "REQ_LAPTOP_BODY_HINGE_PORT",
+        "REQ_PACKAGE_EXTERIOR",
+        "REQ_PACKAGE_LABEL_OR_STAIN",
+    }:
+        return _result(
+            requirement_id,
+            predicates.part_clear,
+            "PRED-PART-CLEAR",
+            f"{requirement_id} satisfied when PART_CLEAR is true for active family.",
+            ("part_clear", str(predicates.part_clear).lower()),
+        )
 
     if requirement_id == "REQ_CAR_IDENTITY_OR_SIDE":
         satisfied = not predicates.identity_conflict
-        outputs["predicate"] = "PRED-IDENTITY-CONFLICT"
-        outputs["identity_conflict"] = str(predicates.identity_conflict).lower()
-        return satisfied, outputs
-
-    if requirement_id == "REQ_LAPTOP_SCREEN_KEYBOARD_TRACKPAD":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
-
-    if requirement_id == "REQ_LAPTOP_BODY_HINGE_PORT":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
-
-    if requirement_id == "REQ_PACKAGE_EXTERIOR":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
-
-    if requirement_id == "REQ_PACKAGE_LABEL_OR_STAIN":
-        outputs["predicate"] = "PRED-PART-CLEAR"
-        return predicates.part_clear, outputs
+        return _result(
+            requirement_id,
+            satisfied,
+            "PRED-IDENTITY-CONFLICT",
+            "Car identity requirement satisfied when no identity conflict is detected.",
+            ("identity_conflict", str(predicates.identity_conflict).lower()),
+        )
 
     if requirement_id == "REQ_PACKAGE_CONTENTS":
-        outputs["predicate"] = "PRED-CONTENTS-AREA-CLEAR"
-        return predicates.contents_area_clear, outputs
+        return _result(
+            requirement_id,
+            predicates.contents_area_clear,
+            "PRED-CONTENTS-AREA-CLEAR",
+            "Package contents requirement satisfied when contents area is clearly visible.",
+            ("contents_area_clear", str(predicates.contents_area_clear).lower()),
+        )
 
-    outputs["error"] = "unknown_requirement"
-    return False, outputs
+    raise NotImplementedError(f"TODO: {requirement_id} — missing requirement satisfaction spec")
 
 
 def evaluate_all_requirements(
     requirement_ids: list[str],
     predicates: PredicatesSnapshot,
     images: list[ImageEvidence],
-) -> dict[str, bool]:
-    """Return satisfaction map for all active requirements."""
-    return {
-        req_id: evaluate_requirement_satisfaction(req_id, predicates, images)[0]
-        for req_id in requirement_ids
-    }
+) -> RequirementEvaluationBundle:
+    return RequirementEvaluationBundle(
+        results=[
+            evaluate_requirement_satisfaction(req_id, predicates, images)
+            for req_id in requirement_ids
+        ]
+    )
