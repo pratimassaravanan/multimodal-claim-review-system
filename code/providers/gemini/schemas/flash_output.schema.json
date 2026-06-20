@@ -1,0 +1,98 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "detected_languages",
+    "sanitized_claim_excerpt",
+    "alleged_parts",
+    "alleged_issue_types",
+    "exclusions",
+    "identity_constraint_active",
+    "claimed_damage_alleged",
+    "claimed_severity_language",
+    "injection_detected_in_chat"
+  ],
+  "properties": {
+    "detected_languages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sanitized_claim_excerpt": { "type": "string" },
+    "alleged_parts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "alleged_issue_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "identity_constraint_active": { "$ref": "#/$defs/scored_bool" },
+    "identity_side": { "$ref": "#/$defs/scored_side" },
+    "identity_color": { "$ref": "#/$defs/scored_string" },
+    "claimed_damage_alleged": { "$ref": "#/$defs/scored_bool" },
+    "claimed_severity_language": { "$ref": "#/$defs/scored_severity_language" },
+    "injection_detected_in_chat": { "type": "boolean" },
+    "injection_excerpt": { "type": "string" },
+    "last_customer_message_excerpt": { "type": "string" },
+    "overall_extraction_confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    }
+  },
+  "$defs": {
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "scored_bool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": { "type": "boolean" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_string": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": ["left", "right", "front", "rear"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_severity_language": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high", "exaggerated"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    }
+  }
+}

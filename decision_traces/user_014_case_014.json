@@ -1,0 +1,1125 @@
+{
+  "row_id": "user_014:case_014",
+  "pipeline_version": "1.0.0",
+  "contracts_version": "2.0",
+  "claim": {
+    "row_id": "user_014:case_014",
+    "user_id": "user_014",
+    "claim_object": "car",
+    "user_claim": "Customer: This is from after my car came back from service. | Support: What changed? | Customer: I noticed a windshield crack. | Support: Are you asking us to review authenticity or just damage? | Customer: Just the windshield crack claim.",
+    "image_paths": [
+      "images/test/case_014/img_1.jpg"
+    ],
+    "image_ids": [
+      "img_1"
+    ],
+    "image_count": 1,
+    "resolved_image_files": [
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_014\\img_1.jpg"
+    ],
+    "history_flags": [
+      "user_history_risk"
+    ],
+    "history_summary": "Prior windshield claim needed manual review",
+    "past_claim_count": 2,
+    "accept_claim": 1,
+    "manual_review_claim": 1,
+    "rejected_claim": 0,
+    "last_90_days_claim_count": 1,
+    "applicable_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_GENERAL_MULTI_IMAGE",
+      "REQ_REVIEW_TRUST",
+      "REQ_CAR_BODY_PANEL",
+      "REQ_CAR_GLASS_LIGHT_MIRROR",
+      "REQ_CAR_IDENTITY_OR_SIDE"
+    ],
+    "pipeline_version": "1.0.0",
+    "observed_at": "2026-06-20T04:54:50.139637Z",
+    "dataset_split": "test",
+    "case_folder": "case_014"
+  },
+  "evidence": {
+    "claim": {
+      "row_id": "user_014:case_014",
+      "user_id": "user_014",
+      "claim_object": "car",
+      "user_claim": "Customer: This is from after my car came back from service. | Support: What changed? | Customer: I noticed a windshield crack. | Support: Are you asking us to review authenticity or just damage? | Customer: Just the windshield crack claim.",
+      "image_paths": [
+        "images/test/case_014/img_1.jpg"
+      ],
+      "image_ids": [
+        "img_1"
+      ],
+      "image_count": 1,
+      "resolved_image_files": [
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_014\\img_1.jpg"
+      ],
+      "history_flags": [
+        "user_history_risk"
+      ],
+      "history_summary": "Prior windshield claim needed manual review",
+      "past_claim_count": 2,
+      "accept_claim": 1,
+      "manual_review_claim": 1,
+      "rejected_claim": 0,
+      "last_90_days_claim_count": 1,
+      "applicable_requirement_ids": [
+        "REQ_GENERAL_OBJECT_PART",
+        "REQ_GENERAL_MULTI_IMAGE",
+        "REQ_REVIEW_TRUST",
+        "REQ_CAR_BODY_PANEL",
+        "REQ_CAR_GLASS_LIGHT_MIRROR",
+        "REQ_CAR_IDENTITY_OR_SIDE"
+      ],
+      "pipeline_version": "1.0.0",
+      "observed_at": "2026-06-20T04:54:50.139637Z",
+      "dataset_split": "test",
+      "case_folder": "case_014"
+    },
+    "claim_observation": {
+      "row_id": "user_014:case_014",
+      "alleged_parts": [
+        "windshield"
+      ],
+      "alleged_issue_types": [
+        "broken_part"
+      ],
+      "alleged_issue_families": [
+        "crack_broken_missing"
+      ],
+      "exclusions": [],
+      "identity_constraint_active": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "identity_side": null,
+      "identity_color": null,
+      "claimed_damage_alleged": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "claimed_severity_language": {
+        "value": "medium",
+        "confidence": "medium",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "multi_part_detected": false,
+      "injection_detected_in_chat": false,
+      "injection_excerpt": null,
+      "sanitized_claim_excerpt": "Customer: Just the windshield crack claim.",
+      "model_name": "mock-gemini-2.5-flash",
+      "prompt_version": "mock-claim-v1",
+      "observation_raw_hash": "sha256:8445cca10fc1f1f5af0efe74f35e9a5b8e37dbc029608be4cd593425c470861e",
+      "observed_at": "2026-06-20T04:54:50.139637Z",
+      "detected_languages": [
+        "en"
+      ],
+      "last_customer_message_excerpt": "Customer: Just the windshield crack claim.",
+      "overall_extraction_confidence": "medium"
+    },
+    "images": [
+      {
+        "row_id": "user_014:case_014",
+        "image_id": "img_1",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_014\\img_1.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_part": {
+          "value": "rear_bumper",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_issue_type": {
+          "value": "dent",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.139637Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:ddad715736bce79d05ef64794f46881c8f52ad22f9b4b142179a81d11422921f",
+        "injection_text_excerpt": null
+      }
+    ],
+    "observation_complete": true,
+    "aggregated_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "claim_observation": {
+    "row_id": "user_014:case_014",
+    "alleged_parts": [
+      "windshield"
+    ],
+    "alleged_issue_types": [
+      "broken_part"
+    ],
+    "alleged_issue_families": [
+      "crack_broken_missing"
+    ],
+    "exclusions": [],
+    "identity_constraint_active": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "identity_side": null,
+    "identity_color": null,
+    "claimed_damage_alleged": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "claimed_severity_language": {
+      "value": "medium",
+      "confidence": "medium",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "multi_part_detected": false,
+    "injection_detected_in_chat": false,
+    "injection_excerpt": null,
+    "sanitized_claim_excerpt": "Customer: Just the windshield crack claim.",
+    "model_name": "mock-gemini-2.5-flash",
+    "prompt_version": "mock-claim-v1",
+    "observation_raw_hash": "sha256:8445cca10fc1f1f5af0efe74f35e9a5b8e37dbc029608be4cd593425c470861e",
+    "observed_at": "2026-06-20T04:54:50.139637Z",
+    "detected_languages": [
+      "en"
+    ],
+    "last_customer_message_excerpt": "Customer: Just the windshield crack claim.",
+    "overall_extraction_confidence": "medium"
+  },
+  "resolution": {
+    "row_id": "user_014:case_014",
+    "claim_observation_ref": "sha256:8445cca10fc1f1f5af0efe74f35e9a5b8e37dbc029608be4cd593425c470861e",
+    "multi_part_claim": false,
+    "primary_object_part": "windshield",
+    "primary_issue_family": "crack_broken_missing",
+    "secondary_object_parts": [],
+    "resolution_method": "single_part",
+    "resolution_rule_ids": [
+      "MP-1",
+      "MP-2"
+    ],
+    "part_visibility_scores": {
+      "windshield": 0
+    },
+    "resolved_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "consistency": {
+    "row_id": "user_014:case_014",
+    "image_count": 1,
+    "identity_conflict": false,
+    "identity_conflict_image_pairs": [],
+    "wrong_object_set": false,
+    "consistent_vehicle_features": true,
+    "best_part_image_ids": [
+      "img_1"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.139637Z",
+    "consistency_notes": null
+  },
+  "validation": {
+    "row_id": "user_014:case_014",
+    "evidence_standard_met": true,
+    "triggered_rule_id": "ESM-R08",
+    "reason_template_key": "esm_r08_default_met",
+    "reason_template_vars": {
+      "part": "windshield"
+    },
+    "active_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_REVIEW_TRUST",
+      "REQ_CAR_GLASS_LIGHT_MIRROR",
+      "REQ_CAR_IDENTITY_OR_SIDE"
+    ],
+    "requirements_satisfied": {
+      "REQ_GENERAL_OBJECT_PART": true,
+      "REQ_REVIEW_TRUST": true,
+      "REQ_CAR_GLASS_LIGHT_MIRROR": true,
+      "REQ_CAR_IDENTITY_OR_SIDE": true
+    },
+    "predicates": {
+      "part_clear": true,
+      "no_part_visible": false,
+      "part_visible_low_only": false,
+      "identity_conflict": false,
+      "contents_claim": false,
+      "contents_area_clear": false,
+      "any_file_unreadable": false,
+      "best_part_confidence": "high",
+      "best_part_image_ids": [
+        "img_1"
+      ]
+    },
+    "evaluated_at": "2026-06-20T04:54:50.139637Z",
+    "identity_match_detail": null
+  },
+  "trust": {
+    "row_id": "user_014:case_014",
+    "valid_image": true,
+    "triggered_rule_id": "VI-R04",
+    "all_images_unusable": false,
+    "any_non_original_high": false,
+    "contents_unreviewable": false,
+    "trust_failure_image_ids": [],
+    "evaluated_at": "2026-06-20T04:54:50.139637Z",
+    "trust_failure_reason": null
+  },
+  "verdict": {
+    "row_id": "user_014:case_014",
+    "claim_status": "contradicted",
+    "claim_status_rule_id": "CS-R04",
+    "issue_type": "dent",
+    "object_part": "rear_bumper",
+    "decided_at": "2026-06-20T04:54:50.139637Z",
+    "contradiction_subtype": "wrong_part"
+  },
+  "severity_decision": {
+    "row_id": "user_014:case_014",
+    "severity": "medium",
+    "severity_rule_id": "SV-R05",
+    "visible_damage_extent_source": "medium",
+    "source_image_id": "img_1",
+    "verdict_ref": "user_014:case_014:verdict:2026-06-20T04:54:50.139637+00:00",
+    "decided_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "supporting_decision": {
+    "row_id": "user_014:case_014",
+    "supporting_image_ids": [
+      "img_1"
+    ],
+    "supporting_image_rule_id": "SI-R05",
+    "excluded_image_ids": [],
+    "selection_rationale": "Image proves contradiction against claimed part or damage",
+    "verdict_ref": "user_014:case_014:verdict:2026-06-20T04:54:50.139637+00:00",
+    "decided_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "decision": {
+    "row_id": "user_014:case_014",
+    "verdict": {
+      "row_id": "user_014:case_014",
+      "claim_status": "contradicted",
+      "claim_status_rule_id": "CS-R04",
+      "issue_type": "dent",
+      "object_part": "rear_bumper",
+      "decided_at": "2026-06-20T04:54:50.139637Z",
+      "contradiction_subtype": "wrong_part"
+    },
+    "severity_decision": {
+      "row_id": "user_014:case_014",
+      "severity": "medium",
+      "severity_rule_id": "SV-R05",
+      "visible_damage_extent_source": "medium",
+      "source_image_id": "img_1",
+      "verdict_ref": "user_014:case_014:verdict:2026-06-20T04:54:50.139637+00:00",
+      "decided_at": "2026-06-20T04:54:50.139637Z"
+    },
+    "supporting_decision": {
+      "row_id": "user_014:case_014",
+      "supporting_image_ids": [
+        "img_1"
+      ],
+      "supporting_image_rule_id": "SI-R05",
+      "excluded_image_ids": [],
+      "selection_rationale": "Image proves contradiction against claimed part or damage",
+      "verdict_ref": "user_014:case_014:verdict:2026-06-20T04:54:50.139637+00:00",
+      "decided_at": "2026-06-20T04:54:50.139637Z"
+    },
+    "evidence_standard_met": true,
+    "evidence_standard_met_reason": "The windshield is visible and the claimed condition can be verified from the submitted image.",
+    "valid_image": true,
+    "claim_status_justification": "The image evidence contradicts the claim based on img_1.",
+    "composed_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "risk": {
+    "row_id": "user_014:case_014",
+    "risk_flags": [
+      "claim_mismatch",
+      "manual_review_required",
+      "user_history_risk",
+      "wrong_object_part"
+    ],
+    "flag_rule_hits": [
+      {
+        "flag": "wrong_object_part",
+        "rule_id": "wrong_object_part",
+        "trigger_image_ids": [
+          "img_1"
+        ],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "claim_mismatch",
+        "rule_id": "claim_mismatch",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "user_history_risk",
+        "rule_id": "user_history_risk",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "manual_review_required",
+        "rule_id": "manual_review_required",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      }
+    ],
+    "manual_review_required": true,
+    "manual_review_rule_ids": [
+      "MRR-2",
+      "MRR-4"
+    ],
+    "history_flags_input": [
+      "user_history_risk"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.139637Z"
+  },
+  "rule_hits_ordered": [
+    {
+      "sequence": 1,
+      "stage": "resolve",
+      "rule_id": "MP-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "affirmed_parts": "windshield",
+        "part_count": "1",
+        "justification": "Collected customer-affirmed parts from claim observation."
+      }
+    },
+    {
+      "sequence": 2,
+      "stage": "resolve",
+      "rule_id": "MP-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "primary_object_part": "windshield",
+        "justification": "Single affirmed part selected as primary."
+      }
+    },
+    {
+      "sequence": 3,
+      "stage": "validation",
+      "rule_id": "ESM-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_file_unreadable": "false",
+        "justification": "Unreadable file prevents evidence evaluation."
+      }
+    },
+    {
+      "sequence": 4,
+      "stage": "validation",
+      "rule_id": "ESM-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_conflict": "false",
+        "justification": "Vehicle identity conflict across images."
+      }
+    },
+    {
+      "sequence": 5,
+      "stage": "validation",
+      "rule_id": "ESM-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "justification": "Claimed part not visible on any image."
+      }
+    },
+    {
+      "sequence": 6,
+      "stage": "validation",
+      "rule_id": "ESM-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_claim": "false",
+        "contents_area_clear": "false",
+        "justification": "Contents claim without visible contents area."
+      }
+    },
+    {
+      "sequence": 7,
+      "stage": "validation",
+      "rule_id": "ESM-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_visible_low_only": "false",
+        "justification": "Part visible only at low confidence without high-confidence image."
+      }
+    },
+    {
+      "sequence": 8,
+      "stage": "validation",
+      "rule_id": "ESM-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_clear": "true",
+        "justification": "Claimed primary part not clear enough for inspection."
+      }
+    },
+    {
+      "sequence": 9,
+      "stage": "validation",
+      "rule_id": "ESM-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_constraint_active": "true",
+        "identity_matchable": "true",
+        "detail": "no_explicit_identity_claim_at_medium_plus",
+        "justification": "Identity constraint satisfied or not active."
+      }
+    },
+    {
+      "sequence": 10,
+      "stage": "validation",
+      "rule_id": "ESM-R08",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "true",
+        "justification": "Default evidence sufficiency met; no higher-priority ESM rule matched."
+      }
+    },
+    {
+      "sequence": 11,
+      "stage": "trust",
+      "rule_id": "VI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "all_images_unusable": "false",
+        "justification": "All images unusable for automated review."
+      }
+    },
+    {
+      "sequence": 12,
+      "stage": "trust",
+      "rule_id": "VI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_non_original_high": "false",
+        "justification": "Non-original image detected at high confidence."
+      }
+    },
+    {
+      "sequence": 13,
+      "stage": "trust",
+      "rule_id": "VI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_unreviewable": "false",
+        "justification": "Contents reviewability check passed."
+      }
+    },
+    {
+      "sequence": 14,
+      "stage": "trust",
+      "rule_id": "VI-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "valid_image": "true",
+        "justification": "Default valid_image=true; no trust failure rule matched."
+      }
+    },
+    {
+      "sequence": 15,
+      "stage": "verdict",
+      "rule_id": "CS-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "true",
+        "justification": "Evidence standard met; CS-R01 does not apply."
+      }
+    },
+    {
+      "sequence": 16,
+      "stage": "verdict",
+      "rule_id": "CS-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "justification": "CS-R02 condition not met."
+      }
+    },
+    {
+      "sequence": 17,
+      "stage": "verdict",
+      "rule_id": "CS-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_clear": "true",
+        "justification": "CS-R03 condition not met."
+      }
+    },
+    {
+      "sequence": 18,
+      "stage": "verdict",
+      "rule_id": "CS-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Visible part differs from claimed primary part."
+      }
+    },
+    {
+      "sequence": 19,
+      "stage": "severity",
+      "rule_id": "SV-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 20,
+      "stage": "severity",
+      "rule_id": "SV-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "dent",
+        "justification": "Issue type is not none or NEI preempts SV-R02."
+      }
+    },
+    {
+      "sequence": 21,
+      "stage": "severity",
+      "rule_id": "SV-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_1",
+        "justification": "Extent medium does not match high."
+      }
+    },
+    {
+      "sequence": 22,
+      "stage": "severity",
+      "rule_id": "SV-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_1",
+        "justification": "Extent medium does not match low."
+      }
+    },
+    {
+      "sequence": 23,
+      "stage": "severity",
+      "rule_id": "SV-R05",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_1",
+        "justification": "Visible damage extent medium on source image."
+      }
+    },
+    {
+      "sequence": 24,
+      "stage": "severity",
+      "rule_id": "SV-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_1",
+        "justification": "Extent medium does not match none."
+      }
+    },
+    {
+      "sequence": 25,
+      "stage": "severity",
+      "rule_id": "SV-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "visible_damage_extent": "medium",
+        "justification": "SV-R07 requires supported status with unknown extent."
+      }
+    },
+    {
+      "sequence": 26,
+      "stage": "severity",
+      "rule_id": "SV-R08",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "justification": "SV-R08 conditions not met."
+      }
+    },
+    {
+      "sequence": 27,
+      "stage": "supporting",
+      "rule_id": "SI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 28,
+      "stage": "supporting",
+      "rule_id": "SI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 29,
+      "stage": "supporting",
+      "rule_id": "SI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Contradicted claim; SI-R03 does not apply."
+      }
+    },
+    {
+      "sequence": 30,
+      "stage": "supporting",
+      "rule_id": "SI-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Contradicted claim; SI-R04 does not apply."
+      }
+    },
+    {
+      "sequence": 31,
+      "stage": "supporting",
+      "rule_id": "SI-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Not a wrong-object contradiction."
+      }
+    },
+    {
+      "sequence": 32,
+      "stage": "supporting",
+      "rule_id": "SI-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_visible_count": "1",
+        "justification": "SI-R07 requires CS-R03 with two or more part-visible images."
+      }
+    },
+    {
+      "sequence": 33,
+      "stage": "supporting",
+      "rule_id": "SI-R05",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R04",
+        "selected": "img_1",
+        "justification": "Reference image proves part mismatch or absent damage contradiction."
+      }
+    },
+    {
+      "sequence": 34,
+      "stage": "risk",
+      "rule_id": "blurry_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No blurry_image."
+      }
+    },
+    {
+      "sequence": 35,
+      "stage": "risk",
+      "rule_id": "cropped_or_obstructed",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No cropped_or_obstructed."
+      }
+    },
+    {
+      "sequence": 36,
+      "stage": "risk",
+      "rule_id": "low_light_or_glare",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No low_light_or_glare."
+      }
+    },
+    {
+      "sequence": 37,
+      "stage": "risk",
+      "rule_id": "wrong_angle",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No wrong-angle risk."
+      }
+    },
+    {
+      "sequence": 38,
+      "stage": "risk",
+      "rule_id": "wrong_object",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "identity_conflict": "false",
+        "justification": "Claim object consistent across images."
+      }
+    },
+    {
+      "sequence": 39,
+      "stage": "risk",
+      "rule_id": "wrong_object_part",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_part": "rear_bumper",
+        "primary_object_part": "windshield",
+        "justification": "Visible part differs from resolved primary part."
+      }
+    },
+    {
+      "sequence": 40,
+      "stage": "risk",
+      "rule_id": "damage_not_visible",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "part_clear": "true",
+        "justification": "Damage visibility risk not triggered."
+      }
+    },
+    {
+      "sequence": 41,
+      "stage": "risk",
+      "rule_id": "claim_mismatch",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R04",
+        "justification": "Contradicted claim with mismatching evidence."
+      }
+    },
+    {
+      "sequence": 42,
+      "stage": "risk",
+      "rule_id": "non_original_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No non_original_image."
+      }
+    },
+    {
+      "sequence": 43,
+      "stage": "risk",
+      "rule_id": "possible_manipulation",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No possible_manipulation."
+      }
+    },
+    {
+      "sequence": 44,
+      "stage": "risk",
+      "rule_id": "text_instruction_present",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No text_instruction_present."
+      }
+    },
+    {
+      "sequence": 45,
+      "stage": "risk",
+      "rule_id": "user_history_risk",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "history_flags": "user_history_risk",
+        "justification": "History contains user_history_risk."
+      }
+    },
+    {
+      "sequence": 46,
+      "stage": "risk",
+      "rule_id": "MRR-1",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-1 not matched."
+      }
+    },
+    {
+      "sequence": 47,
+      "stage": "risk",
+      "rule_id": "MRR-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-2 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 48,
+      "stage": "risk",
+      "rule_id": "MRR-3",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-3 not matched."
+      }
+    },
+    {
+      "sequence": 49,
+      "stage": "risk",
+      "rule_id": "MRR-4",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-4 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 50,
+      "stage": "risk",
+      "rule_id": "MRR-5",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-5 not matched."
+      }
+    },
+    {
+      "sequence": 51,
+      "stage": "risk",
+      "rule_id": "MRR-6",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-6 not matched."
+      }
+    },
+    {
+      "sequence": 52,
+      "stage": "risk",
+      "rule_id": "manual_review_required",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "manual_review_rule_ids": "MRR-2;MRR-4",
+        "justification": "Composite manual review required."
+      }
+    },
+    {
+      "sequence": 53,
+      "stage": "compose",
+      "rule_id": "CMP-HR01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "evidence_standard_met": "true",
+        "justification": "HR-01 evidence standard and claim status are consistent."
+      }
+    },
+    {
+      "sequence": 54,
+      "stage": "compose",
+      "rule_id": "CMP-HR03",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "severity": "medium",
+        "justification": "HR-03 NEI severity consistency satisfied."
+      }
+    },
+    {
+      "sequence": 55,
+      "stage": "compose",
+      "rule_id": "CMP-SV02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "dent",
+        "justification": "SV-02 issue_type none requires severity none."
+      }
+    },
+    {
+      "sequence": 56,
+      "stage": "compose",
+      "rule_id": "CMP-RISK01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "risk_flag_count": "4",
+        "justification": "Risk assessment did not modify verdict claim_status."
+      }
+    },
+    {
+      "sequence": 57,
+      "stage": "compose",
+      "rule_id": "CMP-COMPOSE",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "row_id": "user_014:case_014",
+        "reason_key": "esm_r08_default_met",
+        "justification": "ClaimDecision composed from stage outputs."
+      }
+    }
+  ],
+  "started_at": "2026-06-20T04:54:50.139637Z",
+  "completed_at": "2026-06-20T04:54:50.139637Z",
+  "deterministic_hash": "sha256:403fbd512dcd585bf3682279bbd3d9dee4d5d6460004fb26447de4e3b3d3271a",
+  "model_call_counts": {
+    "claim_observer": 1,
+    "image_observer": 1
+  },
+  "token_usage": null
+}

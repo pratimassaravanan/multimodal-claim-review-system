@@ -1,0 +1,1106 @@
+{
+  "row_id": "user_032:case_032",
+  "pipeline_version": "1.0.0",
+  "contracts_version": "2.0",
+  "claim": {
+    "row_id": "user_032:case_032",
+    "user_id": "user_032",
+    "claim_object": "package",
+    "user_claim": "Customer: I received this parcel after waiting for almost a week, and I opened it in a hurry because I needed the product for work. | Support: What issue did you notice? | Customer: The delivery looked normal at first, so I kept the box aside. Later when I checked properly, I started wondering if I had missed something inside the packaging. I checked the table, the wrapping, and the area near the door. | Support: Are you claiming outer package damage? | Customer: Not exactly. The box condition is not my main concern. | Support: What should the reviewer verify? | Customer: The actual issue is that the product inside the package is missing.",
+    "image_paths": [
+      "images/test/case_032/img_1.jpg",
+      "images/test/case_032/img_2.jpg"
+    ],
+    "image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "image_count": 2,
+    "resolved_image_files": [
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_1.jpg",
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_2.jpg"
+    ],
+    "history_flags": [
+      "manual_review_required"
+    ],
+    "history_summary": "Prior missing item claim lacked enough evidence",
+    "past_claim_count": 1,
+    "accept_claim": 0,
+    "manual_review_claim": 1,
+    "rejected_claim": 0,
+    "last_90_days_claim_count": 1,
+    "applicable_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_GENERAL_MULTI_IMAGE",
+      "REQ_REVIEW_TRUST",
+      "REQ_PACKAGE_EXTERIOR",
+      "REQ_PACKAGE_LABEL_OR_STAIN",
+      "REQ_PACKAGE_CONTENTS"
+    ],
+    "pipeline_version": "1.0.0",
+    "observed_at": "2026-06-20T04:54:50.214463Z",
+    "dataset_split": "test",
+    "case_folder": "case_032"
+  },
+  "evidence": {
+    "claim": {
+      "row_id": "user_032:case_032",
+      "user_id": "user_032",
+      "claim_object": "package",
+      "user_claim": "Customer: I received this parcel after waiting for almost a week, and I opened it in a hurry because I needed the product for work. | Support: What issue did you notice? | Customer: The delivery looked normal at first, so I kept the box aside. Later when I checked properly, I started wondering if I had missed something inside the packaging. I checked the table, the wrapping, and the area near the door. | Support: Are you claiming outer package damage? | Customer: Not exactly. The box condition is not my main concern. | Support: What should the reviewer verify? | Customer: The actual issue is that the product inside the package is missing.",
+      "image_paths": [
+        "images/test/case_032/img_1.jpg",
+        "images/test/case_032/img_2.jpg"
+      ],
+      "image_ids": [
+        "img_1",
+        "img_2"
+      ],
+      "image_count": 2,
+      "resolved_image_files": [
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_1.jpg",
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_2.jpg"
+      ],
+      "history_flags": [
+        "manual_review_required"
+      ],
+      "history_summary": "Prior missing item claim lacked enough evidence",
+      "past_claim_count": 1,
+      "accept_claim": 0,
+      "manual_review_claim": 1,
+      "rejected_claim": 0,
+      "last_90_days_claim_count": 1,
+      "applicable_requirement_ids": [
+        "REQ_GENERAL_OBJECT_PART",
+        "REQ_GENERAL_MULTI_IMAGE",
+        "REQ_REVIEW_TRUST",
+        "REQ_PACKAGE_EXTERIOR",
+        "REQ_PACKAGE_LABEL_OR_STAIN",
+        "REQ_PACKAGE_CONTENTS"
+      ],
+      "pipeline_version": "1.0.0",
+      "observed_at": "2026-06-20T04:54:50.214463Z",
+      "dataset_split": "test",
+      "case_folder": "case_032"
+    },
+    "claim_observation": {
+      "row_id": "user_032:case_032",
+      "alleged_parts": [
+        "contents"
+      ],
+      "alleged_issue_types": [
+        "missing_part"
+      ],
+      "alleged_issue_families": [
+        "contents_or_item"
+      ],
+      "exclusions": [],
+      "identity_constraint_active": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "identity_side": null,
+      "identity_color": null,
+      "claimed_damage_alleged": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "claimed_severity_language": {
+        "value": "medium",
+        "confidence": "medium",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "multi_part_detected": false,
+      "injection_detected_in_chat": false,
+      "injection_excerpt": null,
+      "sanitized_claim_excerpt": "Customer: The actual issue is that the product inside the package is missing.",
+      "model_name": "mock-gemini-2.5-flash",
+      "prompt_version": "mock-claim-v1",
+      "observation_raw_hash": "sha256:0bd4dfab3fd99022413fe13326b163d5346d3dacd9d97d836d94e8d0ecfc03f3",
+      "observed_at": "2026-06-20T04:54:50.214463Z",
+      "detected_languages": [
+        "en"
+      ],
+      "last_customer_message_excerpt": "Customer: The actual issue is that the product inside the package is missing.",
+      "overall_extraction_confidence": "medium"
+    },
+    "images": [
+      {
+        "row_id": "user_032:case_032",
+        "image_id": "img_1",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_1.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_part": {
+          "value": "box",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_issue_type": {
+          "value": "none",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.214463Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:ddad715736bce79d05ef64794f46881c8f52ad22f9b4b142179a81d11422921f",
+        "injection_text_excerpt": null
+      },
+      {
+        "row_id": "user_032:case_032",
+        "image_id": "img_2",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_032\\img_2.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_part": {
+          "value": "box",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_issue_type": {
+          "value": "none",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.214463Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:fce8d68328a2c5b37947183c120f520961b352a8607ad8642a29098c8664d76c",
+        "injection_text_excerpt": null
+      }
+    ],
+    "observation_complete": true,
+    "aggregated_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "claim_observation": {
+    "row_id": "user_032:case_032",
+    "alleged_parts": [
+      "contents"
+    ],
+    "alleged_issue_types": [
+      "missing_part"
+    ],
+    "alleged_issue_families": [
+      "contents_or_item"
+    ],
+    "exclusions": [],
+    "identity_constraint_active": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "identity_side": null,
+    "identity_color": null,
+    "claimed_damage_alleged": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "claimed_severity_language": {
+      "value": "medium",
+      "confidence": "medium",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "multi_part_detected": false,
+    "injection_detected_in_chat": false,
+    "injection_excerpt": null,
+    "sanitized_claim_excerpt": "Customer: The actual issue is that the product inside the package is missing.",
+    "model_name": "mock-gemini-2.5-flash",
+    "prompt_version": "mock-claim-v1",
+    "observation_raw_hash": "sha256:0bd4dfab3fd99022413fe13326b163d5346d3dacd9d97d836d94e8d0ecfc03f3",
+    "observed_at": "2026-06-20T04:54:50.214463Z",
+    "detected_languages": [
+      "en"
+    ],
+    "last_customer_message_excerpt": "Customer: The actual issue is that the product inside the package is missing.",
+    "overall_extraction_confidence": "medium"
+  },
+  "resolution": {
+    "row_id": "user_032:case_032",
+    "claim_observation_ref": "sha256:0bd4dfab3fd99022413fe13326b163d5346d3dacd9d97d836d94e8d0ecfc03f3",
+    "multi_part_claim": false,
+    "primary_object_part": "contents",
+    "primary_issue_family": "contents_or_item",
+    "secondary_object_parts": [],
+    "resolution_method": "single_part",
+    "resolution_rule_ids": [
+      "MP-1",
+      "MP-2"
+    ],
+    "part_visibility_scores": {
+      "contents": 0
+    },
+    "resolved_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "consistency": {
+    "row_id": "user_032:case_032",
+    "image_count": 2,
+    "identity_conflict": false,
+    "identity_conflict_image_pairs": [],
+    "wrong_object_set": false,
+    "consistent_vehicle_features": true,
+    "best_part_image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.214463Z",
+    "consistency_notes": null
+  },
+  "validation": {
+    "row_id": "user_032:case_032",
+    "evidence_standard_met": false,
+    "triggered_rule_id": "ESM-R04",
+    "reason_template_key": "esm_r04_contents_not_shown",
+    "reason_template_vars": {
+      "part": "contents"
+    },
+    "active_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_REVIEW_TRUST",
+      "REQ_PACKAGE_CONTENTS",
+      "REQ_GENERAL_MULTI_IMAGE"
+    ],
+    "requirements_satisfied": {
+      "REQ_GENERAL_OBJECT_PART": true,
+      "REQ_REVIEW_TRUST": true,
+      "REQ_PACKAGE_CONTENTS": false,
+      "REQ_GENERAL_MULTI_IMAGE": true
+    },
+    "predicates": {
+      "part_clear": true,
+      "no_part_visible": false,
+      "part_visible_low_only": false,
+      "identity_conflict": false,
+      "contents_claim": true,
+      "contents_area_clear": false,
+      "any_file_unreadable": false,
+      "best_part_confidence": "high",
+      "best_part_image_ids": [
+        "img_1",
+        "img_2"
+      ]
+    },
+    "evaluated_at": "2026-06-20T04:54:50.214463Z",
+    "identity_match_detail": null
+  },
+  "trust": {
+    "row_id": "user_032:case_032",
+    "valid_image": true,
+    "triggered_rule_id": "VI-R04",
+    "all_images_unusable": false,
+    "any_non_original_high": false,
+    "contents_unreviewable": false,
+    "trust_failure_image_ids": [],
+    "evaluated_at": "2026-06-20T04:54:50.214463Z",
+    "trust_failure_reason": null
+  },
+  "verdict": {
+    "row_id": "user_032:case_032",
+    "claim_status": "not_enough_information",
+    "claim_status_rule_id": "CS-R01",
+    "issue_type": "unknown",
+    "object_part": "contents",
+    "decided_at": "2026-06-20T04:54:50.214463Z",
+    "contradiction_subtype": null
+  },
+  "severity_decision": {
+    "row_id": "user_032:case_032",
+    "severity": "unknown",
+    "severity_rule_id": "SV-R01",
+    "visible_damage_extent_source": "unknown",
+    "source_image_id": null,
+    "verdict_ref": "user_032:case_032:verdict:2026-06-20T04:54:50.214463+00:00",
+    "decided_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "supporting_decision": {
+    "row_id": "user_032:case_032",
+    "supporting_image_ids": [],
+    "supporting_image_rule_id": "SI-R02",
+    "excluded_image_ids": [],
+    "selection_rationale": "Not enough information without identity conflict",
+    "verdict_ref": "user_032:case_032:verdict:2026-06-20T04:54:50.214463+00:00",
+    "decided_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "decision": {
+    "row_id": "user_032:case_032",
+    "verdict": {
+      "row_id": "user_032:case_032",
+      "claim_status": "not_enough_information",
+      "claim_status_rule_id": "CS-R01",
+      "issue_type": "unknown",
+      "object_part": "contents",
+      "decided_at": "2026-06-20T04:54:50.214463Z",
+      "contradiction_subtype": null
+    },
+    "severity_decision": {
+      "row_id": "user_032:case_032",
+      "severity": "unknown",
+      "severity_rule_id": "SV-R01",
+      "visible_damage_extent_source": "unknown",
+      "source_image_id": null,
+      "verdict_ref": "user_032:case_032:verdict:2026-06-20T04:54:50.214463+00:00",
+      "decided_at": "2026-06-20T04:54:50.214463Z"
+    },
+    "supporting_decision": {
+      "row_id": "user_032:case_032",
+      "supporting_image_ids": [],
+      "supporting_image_rule_id": "SI-R02",
+      "excluded_image_ids": [],
+      "selection_rationale": "Not enough information without identity conflict",
+      "verdict_ref": "user_032:case_032:verdict:2026-06-20T04:54:50.214463+00:00",
+      "decided_at": "2026-06-20T04:54:50.214463Z"
+    },
+    "evidence_standard_met": false,
+    "evidence_standard_met_reason": "The images do not clearly show the expected contents or enough of the opened package to verify whether anything is missing.",
+    "valid_image": true,
+    "claim_status_justification": "The submitted images do not provide enough information to verify the claim.",
+    "composed_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "risk": {
+    "row_id": "user_032:case_032",
+    "risk_flags": [
+      "damage_not_visible",
+      "manual_review_required",
+      "wrong_object_part"
+    ],
+    "flag_rule_hits": [
+      {
+        "flag": "wrong_object_part",
+        "rule_id": "wrong_object_part",
+        "trigger_image_ids": [
+          "img_2"
+        ],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "damage_not_visible",
+        "rule_id": "damage_not_visible",
+        "trigger_image_ids": [
+          "img_2"
+        ],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "manual_review_required",
+        "rule_id": "manual_review_required",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      }
+    ],
+    "manual_review_required": true,
+    "manual_review_rule_ids": [
+      "MRR-1",
+      "MRR-6"
+    ],
+    "history_flags_input": [
+      "manual_review_required"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.214463Z"
+  },
+  "rule_hits_ordered": [
+    {
+      "sequence": 1,
+      "stage": "resolve",
+      "rule_id": "MP-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "affirmed_parts": "contents",
+        "part_count": "1",
+        "justification": "Collected customer-affirmed parts from claim observation."
+      }
+    },
+    {
+      "sequence": 2,
+      "stage": "resolve",
+      "rule_id": "MP-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "primary_object_part": "contents",
+        "justification": "Single affirmed part selected as primary."
+      }
+    },
+    {
+      "sequence": 3,
+      "stage": "validation",
+      "rule_id": "ESM-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_file_unreadable": "false",
+        "justification": "Unreadable file prevents evidence evaluation."
+      }
+    },
+    {
+      "sequence": 4,
+      "stage": "validation",
+      "rule_id": "ESM-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_conflict": "false",
+        "justification": "Vehicle identity conflict across images."
+      }
+    },
+    {
+      "sequence": 5,
+      "stage": "validation",
+      "rule_id": "ESM-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "justification": "Claimed part not visible on any image."
+      }
+    },
+    {
+      "sequence": 6,
+      "stage": "validation",
+      "rule_id": "ESM-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_claim": "true",
+        "contents_area_clear": "false",
+        "justification": "Contents claim without visible contents area."
+      }
+    },
+    {
+      "sequence": 7,
+      "stage": "trust",
+      "rule_id": "VI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "all_images_unusable": "false",
+        "justification": "All images unusable for automated review."
+      }
+    },
+    {
+      "sequence": 8,
+      "stage": "trust",
+      "rule_id": "VI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_non_original_high": "false",
+        "justification": "Non-original image detected at high confidence."
+      }
+    },
+    {
+      "sequence": 9,
+      "stage": "trust",
+      "rule_id": "VI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_unreviewable": "false",
+        "justification": "Contents reviewability check passed."
+      }
+    },
+    {
+      "sequence": 10,
+      "stage": "trust",
+      "rule_id": "VI-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "valid_image": "true",
+        "justification": "Default valid_image=true; no trust failure rule matched."
+      }
+    },
+    {
+      "sequence": 11,
+      "stage": "verdict",
+      "rule_id": "CS-R01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "false",
+        "justification": "Evidence standard not met; claim status is not_enough_information."
+      }
+    },
+    {
+      "sequence": 12,
+      "stage": "severity",
+      "rule_id": "SV-R01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "justification": "Not enough information claim status maps severity to unknown."
+      }
+    },
+    {
+      "sequence": 13,
+      "stage": "severity",
+      "rule_id": "SV-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "unknown",
+        "justification": "Issue type is not none or NEI preempts SV-R02."
+      }
+    },
+    {
+      "sequence": 14,
+      "stage": "severity",
+      "rule_id": "SV-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match high."
+      }
+    },
+    {
+      "sequence": 15,
+      "stage": "severity",
+      "rule_id": "SV-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match low."
+      }
+    },
+    {
+      "sequence": 16,
+      "stage": "severity",
+      "rule_id": "SV-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match medium."
+      }
+    },
+    {
+      "sequence": 17,
+      "stage": "severity",
+      "rule_id": "SV-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match none."
+      }
+    },
+    {
+      "sequence": 18,
+      "stage": "severity",
+      "rule_id": "SV-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "visible_damage_extent": "medium",
+        "justification": "SV-R07 requires supported status with unknown extent."
+      }
+    },
+    {
+      "sequence": 19,
+      "stage": "severity",
+      "rule_id": "SV-R08",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "justification": "SV-R08 conditions not met."
+      }
+    },
+    {
+      "sequence": 20,
+      "stage": "supporting",
+      "rule_id": "SI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "No identity conflict on NEI row."
+      }
+    },
+    {
+      "sequence": 21,
+      "stage": "supporting",
+      "rule_id": "SI-R02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "justification": "NEI without identity conflict yields no supporting images."
+      }
+    },
+    {
+      "sequence": 22,
+      "stage": "risk",
+      "rule_id": "blurry_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No blurry_image."
+      }
+    },
+    {
+      "sequence": 23,
+      "stage": "risk",
+      "rule_id": "cropped_or_obstructed",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No cropped_or_obstructed."
+      }
+    },
+    {
+      "sequence": 24,
+      "stage": "risk",
+      "rule_id": "low_light_or_glare",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No low_light_or_glare."
+      }
+    },
+    {
+      "sequence": 25,
+      "stage": "risk",
+      "rule_id": "wrong_angle",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No wrong-angle risk."
+      }
+    },
+    {
+      "sequence": 26,
+      "stage": "risk",
+      "rule_id": "wrong_object",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "identity_conflict": "false",
+        "justification": "Claim object consistent across images."
+      }
+    },
+    {
+      "sequence": 27,
+      "stage": "risk",
+      "rule_id": "wrong_object_part",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_part": "box",
+        "primary_object_part": "contents",
+        "justification": "Visible part differs from resolved primary part."
+      }
+    },
+    {
+      "sequence": 28,
+      "stage": "risk",
+      "rule_id": "damage_not_visible",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "part_clear": "true",
+        "justification": "Claimed damage not visible on submitted images."
+      }
+    },
+    {
+      "sequence": 29,
+      "stage": "risk",
+      "rule_id": "claim_mismatch",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R01",
+        "justification": "Claim mismatch flag not triggered."
+      }
+    },
+    {
+      "sequence": 30,
+      "stage": "risk",
+      "rule_id": "non_original_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No non_original_image."
+      }
+    },
+    {
+      "sequence": 31,
+      "stage": "risk",
+      "rule_id": "possible_manipulation",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No possible_manipulation."
+      }
+    },
+    {
+      "sequence": 32,
+      "stage": "risk",
+      "rule_id": "text_instruction_present",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No text_instruction_present."
+      }
+    },
+    {
+      "sequence": 33,
+      "stage": "risk",
+      "rule_id": "user_history_risk",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "history_flags": "manual_review_required",
+        "justification": "No user history risk flag."
+      }
+    },
+    {
+      "sequence": 34,
+      "stage": "risk",
+      "rule_id": "MRR-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-1 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 35,
+      "stage": "risk",
+      "rule_id": "MRR-2",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-2 not matched."
+      }
+    },
+    {
+      "sequence": 36,
+      "stage": "risk",
+      "rule_id": "MRR-3",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-3 not matched."
+      }
+    },
+    {
+      "sequence": 37,
+      "stage": "risk",
+      "rule_id": "MRR-4",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-4 not matched."
+      }
+    },
+    {
+      "sequence": 38,
+      "stage": "risk",
+      "rule_id": "MRR-5",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-5 not matched."
+      }
+    },
+    {
+      "sequence": 39,
+      "stage": "risk",
+      "rule_id": "MRR-6",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-6 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 40,
+      "stage": "risk",
+      "rule_id": "manual_review_required",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "manual_review_rule_ids": "MRR-1;MRR-6",
+        "justification": "Composite manual review required."
+      }
+    },
+    {
+      "sequence": 41,
+      "stage": "compose",
+      "rule_id": "CMP-HR01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "evidence_standard_met": "false",
+        "justification": "HR-01 evidence standard and claim status are consistent."
+      }
+    },
+    {
+      "sequence": 42,
+      "stage": "compose",
+      "rule_id": "CMP-HR03",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "severity": "unknown",
+        "justification": "HR-03 NEI severity consistency satisfied."
+      }
+    },
+    {
+      "sequence": 43,
+      "stage": "compose",
+      "rule_id": "CMP-SV02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "unknown",
+        "justification": "SV-02 issue_type none requires severity none."
+      }
+    },
+    {
+      "sequence": 44,
+      "stage": "compose",
+      "rule_id": "CMP-RISK01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "risk_flag_count": "3",
+        "justification": "Risk assessment did not modify verdict claim_status."
+      }
+    },
+    {
+      "sequence": 45,
+      "stage": "compose",
+      "rule_id": "CMP-COMPOSE",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "row_id": "user_032:case_032",
+        "reason_key": "esm_r04_contents_not_shown",
+        "justification": "ClaimDecision composed from stage outputs."
+      }
+    }
+  ],
+  "started_at": "2026-06-20T04:54:50.214463Z",
+  "completed_at": "2026-06-20T04:54:50.214463Z",
+  "deterministic_hash": "sha256:206ea4d5dcd107792621ed1d42e3ed3b45e4b3ba401d9230224d19f695a2ea29",
+  "model_call_counts": {
+    "claim_observer": 1,
+    "image_observer": 2
+  },
+  "token_usage": null
+}

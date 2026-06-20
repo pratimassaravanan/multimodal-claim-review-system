@@ -1,0 +1,1156 @@
+{
+  "row_id": "user_047:case_047",
+  "pipeline_version": "1.0.0",
+  "contracts_version": "2.0",
+  "claim": {
+    "row_id": "user_047:case_047",
+    "user_id": "user_047",
+    "claim_object": "car",
+    "user_claim": "Customer: Left side door dented. | Support: Left side from driver perspective? | Customer: Yes. | Support: Are you also claiming right side damage? | Customer: No, left side door only.",
+    "image_paths": [
+      "images/test/case_047/img_1.jpg",
+      "images/test/case_047/img_2.jpg"
+    ],
+    "image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "image_count": 2,
+    "resolved_image_files": [
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_1.jpg",
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_2.jpg"
+    ],
+    "history_flags": [
+      "user_history_risk",
+      "manual_review_required"
+    ],
+    "history_summary": "Repeated side-specific car claims with some rejected mismatches",
+    "past_claim_count": 7,
+    "accept_claim": 3,
+    "manual_review_claim": 1,
+    "rejected_claim": 3,
+    "last_90_days_claim_count": 4,
+    "applicable_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_GENERAL_MULTI_IMAGE",
+      "REQ_REVIEW_TRUST",
+      "REQ_CAR_BODY_PANEL",
+      "REQ_CAR_GLASS_LIGHT_MIRROR",
+      "REQ_CAR_IDENTITY_OR_SIDE"
+    ],
+    "pipeline_version": "1.0.0",
+    "observed_at": "2026-06-20T04:54:50.332136Z",
+    "dataset_split": "test",
+    "case_folder": "case_047"
+  },
+  "evidence": {
+    "claim": {
+      "row_id": "user_047:case_047",
+      "user_id": "user_047",
+      "claim_object": "car",
+      "user_claim": "Customer: Left side door dented. | Support: Left side from driver perspective? | Customer: Yes. | Support: Are you also claiming right side damage? | Customer: No, left side door only.",
+      "image_paths": [
+        "images/test/case_047/img_1.jpg",
+        "images/test/case_047/img_2.jpg"
+      ],
+      "image_ids": [
+        "img_1",
+        "img_2"
+      ],
+      "image_count": 2,
+      "resolved_image_files": [
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_1.jpg",
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_2.jpg"
+      ],
+      "history_flags": [
+        "user_history_risk",
+        "manual_review_required"
+      ],
+      "history_summary": "Repeated side-specific car claims with some rejected mismatches",
+      "past_claim_count": 7,
+      "accept_claim": 3,
+      "manual_review_claim": 1,
+      "rejected_claim": 3,
+      "last_90_days_claim_count": 4,
+      "applicable_requirement_ids": [
+        "REQ_GENERAL_OBJECT_PART",
+        "REQ_GENERAL_MULTI_IMAGE",
+        "REQ_REVIEW_TRUST",
+        "REQ_CAR_BODY_PANEL",
+        "REQ_CAR_GLASS_LIGHT_MIRROR",
+        "REQ_CAR_IDENTITY_OR_SIDE"
+      ],
+      "pipeline_version": "1.0.0",
+      "observed_at": "2026-06-20T04:54:50.332136Z",
+      "dataset_split": "test",
+      "case_folder": "case_047"
+    },
+    "claim_observation": {
+      "row_id": "user_047:case_047",
+      "alleged_parts": [
+        "door"
+      ],
+      "alleged_issue_types": [
+        "dent"
+      ],
+      "alleged_issue_families": [
+        "dent_or_scratch"
+      ],
+      "exclusions": [],
+      "identity_constraint_active": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "identity_side": {
+        "value": "left",
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "identity_color": null,
+      "claimed_damage_alleged": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "claimed_severity_language": {
+        "value": "medium",
+        "confidence": "medium",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "multi_part_detected": false,
+      "injection_detected_in_chat": false,
+      "injection_excerpt": null,
+      "sanitized_claim_excerpt": "Customer: No, left side door only.",
+      "model_name": "mock-gemini-2.5-flash",
+      "prompt_version": "mock-claim-v1",
+      "observation_raw_hash": "sha256:eb708fad0b8a786815dbf2c3dad548efed00d9df4f7b5ace70e42f297ff84c75",
+      "observed_at": "2026-06-20T04:54:50.332136Z",
+      "detected_languages": [
+        "en"
+      ],
+      "last_customer_message_excerpt": "Customer: No, left side door only.",
+      "overall_extraction_confidence": "medium"
+    },
+    "images": [
+      {
+        "row_id": "user_047:case_047",
+        "image_id": "img_1",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_1.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_part": {
+          "value": "rear_bumper",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_issue_type": {
+          "value": "dent",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.332136Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:ddad715736bce79d05ef64794f46881c8f52ad22f9b4b142179a81d11422921f",
+        "injection_text_excerpt": null
+      },
+      {
+        "row_id": "user_047:case_047",
+        "image_id": "img_2",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_047\\img_2.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_part": {
+          "value": "rear_bumper",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_issue_type": {
+          "value": "dent",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.332136Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:fce8d68328a2c5b37947183c120f520961b352a8607ad8642a29098c8664d76c",
+        "injection_text_excerpt": null
+      }
+    ],
+    "observation_complete": true,
+    "aggregated_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "claim_observation": {
+    "row_id": "user_047:case_047",
+    "alleged_parts": [
+      "door"
+    ],
+    "alleged_issue_types": [
+      "dent"
+    ],
+    "alleged_issue_families": [
+      "dent_or_scratch"
+    ],
+    "exclusions": [],
+    "identity_constraint_active": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "identity_side": {
+      "value": "left",
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "identity_color": null,
+    "claimed_damage_alleged": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "claimed_severity_language": {
+      "value": "medium",
+      "confidence": "medium",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "multi_part_detected": false,
+    "injection_detected_in_chat": false,
+    "injection_excerpt": null,
+    "sanitized_claim_excerpt": "Customer: No, left side door only.",
+    "model_name": "mock-gemini-2.5-flash",
+    "prompt_version": "mock-claim-v1",
+    "observation_raw_hash": "sha256:eb708fad0b8a786815dbf2c3dad548efed00d9df4f7b5ace70e42f297ff84c75",
+    "observed_at": "2026-06-20T04:54:50.332136Z",
+    "detected_languages": [
+      "en"
+    ],
+    "last_customer_message_excerpt": "Customer: No, left side door only.",
+    "overall_extraction_confidence": "medium"
+  },
+  "resolution": {
+    "row_id": "user_047:case_047",
+    "claim_observation_ref": "sha256:eb708fad0b8a786815dbf2c3dad548efed00d9df4f7b5ace70e42f297ff84c75",
+    "multi_part_claim": false,
+    "primary_object_part": "door",
+    "primary_issue_family": "dent_or_scratch",
+    "secondary_object_parts": [],
+    "resolution_method": "single_part",
+    "resolution_rule_ids": [
+      "MP-1",
+      "MP-2"
+    ],
+    "part_visibility_scores": {
+      "door": 0
+    },
+    "resolved_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "consistency": {
+    "row_id": "user_047:case_047",
+    "image_count": 2,
+    "identity_conflict": false,
+    "identity_conflict_image_pairs": [],
+    "wrong_object_set": false,
+    "consistent_vehicle_features": true,
+    "best_part_image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.332136Z",
+    "consistency_notes": null
+  },
+  "validation": {
+    "row_id": "user_047:case_047",
+    "evidence_standard_met": false,
+    "triggered_rule_id": "ESM-R07",
+    "reason_template_key": "esm_r07_identity_not_matchable",
+    "reason_template_vars": {
+      "part": "door"
+    },
+    "active_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_REVIEW_TRUST",
+      "REQ_CAR_BODY_PANEL",
+      "REQ_GENERAL_MULTI_IMAGE",
+      "REQ_CAR_IDENTITY_OR_SIDE"
+    ],
+    "requirements_satisfied": {
+      "REQ_GENERAL_OBJECT_PART": true,
+      "REQ_REVIEW_TRUST": true,
+      "REQ_CAR_BODY_PANEL": true,
+      "REQ_GENERAL_MULTI_IMAGE": true,
+      "REQ_CAR_IDENTITY_OR_SIDE": true
+    },
+    "predicates": {
+      "part_clear": true,
+      "no_part_visible": false,
+      "part_visible_low_only": false,
+      "identity_conflict": false,
+      "contents_claim": false,
+      "contents_area_clear": false,
+      "any_file_unreadable": false,
+      "best_part_confidence": "high",
+      "best_part_image_ids": [
+        "img_1",
+        "img_2"
+      ]
+    },
+    "evaluated_at": "2026-06-20T04:54:50.332136Z",
+    "identity_match_detail": "missing_side_on_img_1"
+  },
+  "trust": {
+    "row_id": "user_047:case_047",
+    "valid_image": true,
+    "triggered_rule_id": "VI-R04",
+    "all_images_unusable": false,
+    "any_non_original_high": false,
+    "contents_unreviewable": false,
+    "trust_failure_image_ids": [],
+    "evaluated_at": "2026-06-20T04:54:50.332136Z",
+    "trust_failure_reason": null
+  },
+  "verdict": {
+    "row_id": "user_047:case_047",
+    "claim_status": "not_enough_information",
+    "claim_status_rule_id": "CS-R01",
+    "issue_type": "unknown",
+    "object_part": "door",
+    "decided_at": "2026-06-20T04:54:50.332136Z",
+    "contradiction_subtype": null
+  },
+  "severity_decision": {
+    "row_id": "user_047:case_047",
+    "severity": "unknown",
+    "severity_rule_id": "SV-R01",
+    "visible_damage_extent_source": "unknown",
+    "source_image_id": null,
+    "verdict_ref": "user_047:case_047:verdict:2026-06-20T04:54:50.332136+00:00",
+    "decided_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "supporting_decision": {
+    "row_id": "user_047:case_047",
+    "supporting_image_ids": [],
+    "supporting_image_rule_id": "SI-R02",
+    "excluded_image_ids": [],
+    "selection_rationale": "Not enough information without identity conflict",
+    "verdict_ref": "user_047:case_047:verdict:2026-06-20T04:54:50.332136+00:00",
+    "decided_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "decision": {
+    "row_id": "user_047:case_047",
+    "verdict": {
+      "row_id": "user_047:case_047",
+      "claim_status": "not_enough_information",
+      "claim_status_rule_id": "CS-R01",
+      "issue_type": "unknown",
+      "object_part": "door",
+      "decided_at": "2026-06-20T04:54:50.332136Z",
+      "contradiction_subtype": null
+    },
+    "severity_decision": {
+      "row_id": "user_047:case_047",
+      "severity": "unknown",
+      "severity_rule_id": "SV-R01",
+      "visible_damage_extent_source": "unknown",
+      "source_image_id": null,
+      "verdict_ref": "user_047:case_047:verdict:2026-06-20T04:54:50.332136+00:00",
+      "decided_at": "2026-06-20T04:54:50.332136Z"
+    },
+    "supporting_decision": {
+      "row_id": "user_047:case_047",
+      "supporting_image_ids": [],
+      "supporting_image_rule_id": "SI-R02",
+      "excluded_image_ids": [],
+      "selection_rationale": "Not enough information without identity conflict",
+      "verdict_ref": "user_047:case_047:verdict:2026-06-20T04:54:50.332136+00:00",
+      "decided_at": "2026-06-20T04:54:50.332136Z"
+    },
+    "evidence_standard_met": false,
+    "evidence_standard_met_reason": "The image set does not show enough context to match the claimed vehicle and part.",
+    "valid_image": true,
+    "claim_status_justification": "The submitted images do not provide enough information to verify the claim.",
+    "composed_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "risk": {
+    "row_id": "user_047:case_047",
+    "risk_flags": [
+      "manual_review_required",
+      "user_history_risk",
+      "wrong_object_part"
+    ],
+    "flag_rule_hits": [
+      {
+        "flag": "wrong_object_part",
+        "rule_id": "wrong_object_part",
+        "trigger_image_ids": [
+          "img_2"
+        ],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "user_history_risk",
+        "rule_id": "user_history_risk",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "manual_review_required",
+        "rule_id": "manual_review_required",
+        "trigger_image_ids": [],
+        "min_confidence_met": true
+      }
+    ],
+    "manual_review_required": true,
+    "manual_review_rule_ids": [
+      "MRR-1",
+      "MRR-2"
+    ],
+    "history_flags_input": [
+      "user_history_risk",
+      "manual_review_required"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.332136Z"
+  },
+  "rule_hits_ordered": [
+    {
+      "sequence": 1,
+      "stage": "resolve",
+      "rule_id": "MP-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "affirmed_parts": "door",
+        "part_count": "1",
+        "justification": "Collected customer-affirmed parts from claim observation."
+      }
+    },
+    {
+      "sequence": 2,
+      "stage": "resolve",
+      "rule_id": "MP-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "primary_object_part": "door",
+        "justification": "Single affirmed part selected as primary."
+      }
+    },
+    {
+      "sequence": 3,
+      "stage": "validation",
+      "rule_id": "ESM-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_file_unreadable": "false",
+        "justification": "Unreadable file prevents evidence evaluation."
+      }
+    },
+    {
+      "sequence": 4,
+      "stage": "validation",
+      "rule_id": "ESM-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_conflict": "false",
+        "justification": "Vehicle identity conflict across images."
+      }
+    },
+    {
+      "sequence": 5,
+      "stage": "validation",
+      "rule_id": "ESM-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "justification": "Claimed part not visible on any image."
+      }
+    },
+    {
+      "sequence": 6,
+      "stage": "validation",
+      "rule_id": "ESM-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_claim": "false",
+        "contents_area_clear": "false",
+        "justification": "Contents claim without visible contents area."
+      }
+    },
+    {
+      "sequence": 7,
+      "stage": "validation",
+      "rule_id": "ESM-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_visible_low_only": "false",
+        "justification": "Part visible only at low confidence without high-confidence image."
+      }
+    },
+    {
+      "sequence": 8,
+      "stage": "validation",
+      "rule_id": "ESM-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_clear": "true",
+        "justification": "Claimed primary part not clear enough for inspection."
+      }
+    },
+    {
+      "sequence": 9,
+      "stage": "validation",
+      "rule_id": "ESM-R07",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_constraint_active": "true",
+        "identity_matchable": "false",
+        "detail": "missing_side_on_img_1",
+        "justification": "Claimed vehicle identity not matchable across best-part images."
+      }
+    },
+    {
+      "sequence": 10,
+      "stage": "trust",
+      "rule_id": "VI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "all_images_unusable": "false",
+        "justification": "All images unusable for automated review."
+      }
+    },
+    {
+      "sequence": 11,
+      "stage": "trust",
+      "rule_id": "VI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_non_original_high": "false",
+        "justification": "Non-original image detected at high confidence."
+      }
+    },
+    {
+      "sequence": 12,
+      "stage": "trust",
+      "rule_id": "VI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_unreviewable": "false",
+        "justification": "Contents reviewability check passed."
+      }
+    },
+    {
+      "sequence": 13,
+      "stage": "trust",
+      "rule_id": "VI-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "valid_image": "true",
+        "justification": "Default valid_image=true; no trust failure rule matched."
+      }
+    },
+    {
+      "sequence": 14,
+      "stage": "verdict",
+      "rule_id": "CS-R01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "false",
+        "justification": "Evidence standard not met; claim status is not_enough_information."
+      }
+    },
+    {
+      "sequence": 15,
+      "stage": "severity",
+      "rule_id": "SV-R01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "justification": "Not enough information claim status maps severity to unknown."
+      }
+    },
+    {
+      "sequence": 16,
+      "stage": "severity",
+      "rule_id": "SV-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "unknown",
+        "justification": "Issue type is not none or NEI preempts SV-R02."
+      }
+    },
+    {
+      "sequence": 17,
+      "stage": "severity",
+      "rule_id": "SV-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match high."
+      }
+    },
+    {
+      "sequence": 18,
+      "stage": "severity",
+      "rule_id": "SV-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match low."
+      }
+    },
+    {
+      "sequence": 19,
+      "stage": "severity",
+      "rule_id": "SV-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match medium."
+      }
+    },
+    {
+      "sequence": 20,
+      "stage": "severity",
+      "rule_id": "SV-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match none."
+      }
+    },
+    {
+      "sequence": 21,
+      "stage": "severity",
+      "rule_id": "SV-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "visible_damage_extent": "medium",
+        "justification": "SV-R07 requires supported status with unknown extent."
+      }
+    },
+    {
+      "sequence": 22,
+      "stage": "severity",
+      "rule_id": "SV-R08",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "justification": "SV-R08 conditions not met."
+      }
+    },
+    {
+      "sequence": 23,
+      "stage": "supporting",
+      "rule_id": "SI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "No identity conflict on NEI row."
+      }
+    },
+    {
+      "sequence": 24,
+      "stage": "supporting",
+      "rule_id": "SI-R02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "justification": "NEI without identity conflict yields no supporting images."
+      }
+    },
+    {
+      "sequence": 25,
+      "stage": "risk",
+      "rule_id": "blurry_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No blurry_image."
+      }
+    },
+    {
+      "sequence": 26,
+      "stage": "risk",
+      "rule_id": "cropped_or_obstructed",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No cropped_or_obstructed."
+      }
+    },
+    {
+      "sequence": 27,
+      "stage": "risk",
+      "rule_id": "low_light_or_glare",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No low_light_or_glare."
+      }
+    },
+    {
+      "sequence": 28,
+      "stage": "risk",
+      "rule_id": "wrong_angle",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No wrong-angle risk."
+      }
+    },
+    {
+      "sequence": 29,
+      "stage": "risk",
+      "rule_id": "wrong_object",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "identity_conflict": "false",
+        "justification": "Claim object consistent across images."
+      }
+    },
+    {
+      "sequence": 30,
+      "stage": "risk",
+      "rule_id": "wrong_object_part",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_part": "rear_bumper",
+        "primary_object_part": "door",
+        "justification": "Visible part differs from resolved primary part."
+      }
+    },
+    {
+      "sequence": 31,
+      "stage": "risk",
+      "rule_id": "damage_not_visible",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "part_clear": "true",
+        "justification": "Damage visibility risk not triggered."
+      }
+    },
+    {
+      "sequence": 32,
+      "stage": "risk",
+      "rule_id": "claim_mismatch",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R01",
+        "justification": "Claim mismatch flag not triggered."
+      }
+    },
+    {
+      "sequence": 33,
+      "stage": "risk",
+      "rule_id": "non_original_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No non_original_image."
+      }
+    },
+    {
+      "sequence": 34,
+      "stage": "risk",
+      "rule_id": "possible_manipulation",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No possible_manipulation."
+      }
+    },
+    {
+      "sequence": 35,
+      "stage": "risk",
+      "rule_id": "text_instruction_present",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No text_instruction_present."
+      }
+    },
+    {
+      "sequence": 36,
+      "stage": "risk",
+      "rule_id": "user_history_risk",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "history_flags": "user_history_risk;manual_review_required",
+        "justification": "History contains user_history_risk."
+      }
+    },
+    {
+      "sequence": 37,
+      "stage": "risk",
+      "rule_id": "MRR-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-1 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 38,
+      "stage": "risk",
+      "rule_id": "MRR-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-2 manual review trigger matched."
+      }
+    },
+    {
+      "sequence": 39,
+      "stage": "risk",
+      "rule_id": "MRR-3",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-3 not matched."
+      }
+    },
+    {
+      "sequence": 40,
+      "stage": "risk",
+      "rule_id": "MRR-4",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-4 not matched."
+      }
+    },
+    {
+      "sequence": 41,
+      "stage": "risk",
+      "rule_id": "MRR-5",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-5 not matched."
+      }
+    },
+    {
+      "sequence": 42,
+      "stage": "risk",
+      "rule_id": "MRR-6",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-6 not matched."
+      }
+    },
+    {
+      "sequence": 43,
+      "stage": "risk",
+      "rule_id": "manual_review_required",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "manual_review_rule_ids": "MRR-1;MRR-2",
+        "justification": "Composite manual review required."
+      }
+    },
+    {
+      "sequence": 44,
+      "stage": "compose",
+      "rule_id": "CMP-HR01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "evidence_standard_met": "false",
+        "justification": "HR-01 evidence standard and claim status are consistent."
+      }
+    },
+    {
+      "sequence": 45,
+      "stage": "compose",
+      "rule_id": "CMP-HR03",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "severity": "unknown",
+        "justification": "HR-03 NEI severity consistency satisfied."
+      }
+    },
+    {
+      "sequence": 46,
+      "stage": "compose",
+      "rule_id": "CMP-SV02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "unknown",
+        "justification": "SV-02 issue_type none requires severity none."
+      }
+    },
+    {
+      "sequence": 47,
+      "stage": "compose",
+      "rule_id": "CMP-RISK01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "not_enough_information",
+        "risk_flag_count": "3",
+        "justification": "Risk assessment did not modify verdict claim_status."
+      }
+    },
+    {
+      "sequence": 48,
+      "stage": "compose",
+      "rule_id": "CMP-COMPOSE",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "row_id": "user_047:case_047",
+        "reason_key": "esm_r07_identity_not_matchable",
+        "justification": "ClaimDecision composed from stage outputs."
+      }
+    }
+  ],
+  "started_at": "2026-06-20T04:54:50.332136Z",
+  "completed_at": "2026-06-20T04:54:50.332136Z",
+  "deterministic_hash": "sha256:930d9259c78f3f75c91541815562739633d95e0c5b17de3f00b5983e679536b1",
+  "model_call_counts": {
+    "claim_observer": 1,
+    "image_observer": 2
+  },
+  "token_usage": null
+}

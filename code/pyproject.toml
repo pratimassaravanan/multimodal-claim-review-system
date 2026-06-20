@@ -19,7 +19,7 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["contracts*", "ontology*", "rules*"]
+include = ["contracts*", "ontology*", "rules*", "providers*", "orchestration*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "file_readable",
+    "usable_for_automated_review",
+    "depicts_claim_object",
+    "visible_part",
+    "claimed_primary_part_visible",
+    "visible_issue_type",
+    "visible_damage_extent",
+    "is_blurry",
+    "is_cropped_or_obstructed",
+    "is_low_light_or_glare",
+    "is_wrong_angle_for_claimed_part",
+    "is_non_original_image",
+    "is_possibly_manipulated",
+    "has_instruction_text",
+    "package_is_opened",
+    "contents_area_visible",
+    "vehicle_identity_features"
+  ],
+  "properties": {
+    "file_readable": { "type": "boolean" },
+    "usable_for_automated_review": { "type": "boolean" },
+    "depicts_claim_object": { "$ref": "#/$defs/scored_bool" },
+    "visible_part": { "$ref": "#/$defs/scored_part" },
+    "claimed_primary_part_visible": { "$ref": "#/$defs/scored_bool" },
+    "visible_issue_type": { "$ref": "#/$defs/scored_issue_type" },
+    "visible_damage_extent": { "$ref": "#/$defs/scored_damage_extent" },
+    "is_blurry": { "$ref": "#/$defs/scored_bool" },
+    "is_cropped_or_obstructed": { "$ref": "#/$defs/scored_bool" },
+    "is_low_light_or_glare": { "$ref": "#/$defs/scored_bool" },
+    "is_wrong_angle_for_claimed_part": { "$ref": "#/$defs/scored_bool" },
+    "is_non_original_image": { "$ref": "#/$defs/scored_bool" },
+    "is_possibly_manipulated": { "$ref": "#/$defs/scored_bool" },
+    "has_instruction_text": { "$ref": "#/$defs/scored_bool" },
+    "package_is_opened": { "$ref": "#/$defs/scored_bool" },
+    "contents_area_visible": { "$ref": "#/$defs/scored_bool" },
+    "vehicle_identity_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "injection_text_excerpt": { "type": "string" }
+  },
+  "$defs": {
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "scored_bool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": { "type": "boolean" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_issue_type": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    },
+    "scored_damage_extent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high", "unknown"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "confidence_score": { "type": "number" }
+      }
+    }
+  }
+}

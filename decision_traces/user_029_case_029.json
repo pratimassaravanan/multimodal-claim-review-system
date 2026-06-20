@@ -1,0 +1,1220 @@
+{
+  "row_id": "user_029:case_029",
+  "pipeline_version": "1.0.0",
+  "contracts_version": "2.0",
+  "claim": {
+    "row_id": "user_029:case_029",
+    "user_id": "user_029",
+    "claim_object": "package",
+    "user_claim": "Customer: Parcel receive hua toh corner dab gaya tha. | Support: Aap item damage claim kar rahe hain ya packaging? | Customer: Sirf package corner damage. Item abhi open nahi kiya. | Support: Full view aur close-up dono upload kiya? | Customer: Haan, package corner crushed hai.",
+    "image_paths": [
+      "images/test/case_029/img_1.jpg",
+      "images/test/case_029/img_2.jpg"
+    ],
+    "image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "image_count": 2,
+    "resolved_image_files": [
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_1.jpg",
+      "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_2.jpg"
+    ],
+    "history_flags": [
+      "none"
+    ],
+    "history_summary": "Low-risk package damage history",
+    "past_claim_count": 2,
+    "accept_claim": 2,
+    "manual_review_claim": 0,
+    "rejected_claim": 0,
+    "last_90_days_claim_count": 1,
+    "applicable_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_GENERAL_MULTI_IMAGE",
+      "REQ_REVIEW_TRUST",
+      "REQ_PACKAGE_EXTERIOR",
+      "REQ_PACKAGE_LABEL_OR_STAIN",
+      "REQ_PACKAGE_CONTENTS"
+    ],
+    "pipeline_version": "1.0.0",
+    "observed_at": "2026-06-20T04:54:50.191989Z",
+    "dataset_split": "test",
+    "case_folder": "case_029"
+  },
+  "evidence": {
+    "claim": {
+      "row_id": "user_029:case_029",
+      "user_id": "user_029",
+      "claim_object": "package",
+      "user_claim": "Customer: Parcel receive hua toh corner dab gaya tha. | Support: Aap item damage claim kar rahe hain ya packaging? | Customer: Sirf package corner damage. Item abhi open nahi kiya. | Support: Full view aur close-up dono upload kiya? | Customer: Haan, package corner crushed hai.",
+      "image_paths": [
+        "images/test/case_029/img_1.jpg",
+        "images/test/case_029/img_2.jpg"
+      ],
+      "image_ids": [
+        "img_1",
+        "img_2"
+      ],
+      "image_count": 2,
+      "resolved_image_files": [
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_1.jpg",
+        "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_2.jpg"
+      ],
+      "history_flags": [
+        "none"
+      ],
+      "history_summary": "Low-risk package damage history",
+      "past_claim_count": 2,
+      "accept_claim": 2,
+      "manual_review_claim": 0,
+      "rejected_claim": 0,
+      "last_90_days_claim_count": 1,
+      "applicable_requirement_ids": [
+        "REQ_GENERAL_OBJECT_PART",
+        "REQ_GENERAL_MULTI_IMAGE",
+        "REQ_REVIEW_TRUST",
+        "REQ_PACKAGE_EXTERIOR",
+        "REQ_PACKAGE_LABEL_OR_STAIN",
+        "REQ_PACKAGE_CONTENTS"
+      ],
+      "pipeline_version": "1.0.0",
+      "observed_at": "2026-06-20T04:54:50.191989Z",
+      "dataset_split": "test",
+      "case_folder": "case_029"
+    },
+    "claim_observation": {
+      "row_id": "user_029:case_029",
+      "alleged_parts": [
+        "package_corner"
+      ],
+      "alleged_issue_types": [
+        "crushed_packaging"
+      ],
+      "alleged_issue_families": [
+        "crushed_torn_seal"
+      ],
+      "exclusions": [],
+      "identity_constraint_active": {
+        "value": false,
+        "confidence": "low",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "identity_side": null,
+      "identity_color": null,
+      "claimed_damage_alleged": {
+        "value": true,
+        "confidence": "high",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "claimed_severity_language": {
+        "value": "medium",
+        "confidence": "medium",
+        "confidence_score": null,
+        "source_module": "claim_observer",
+        "source_image_id": null
+      },
+      "multi_part_detected": false,
+      "injection_detected_in_chat": false,
+      "injection_excerpt": null,
+      "sanitized_claim_excerpt": "Customer: Haan, package corner crushed hai.",
+      "model_name": "mock-gemini-2.5-flash",
+      "prompt_version": "mock-claim-v1",
+      "observation_raw_hash": "sha256:f4918b9990825efc5113b026c0fb519061627ad9593ab7182eb8803e0a8565ac",
+      "observed_at": "2026-06-20T04:54:50.191989Z",
+      "detected_languages": [
+        "en"
+      ],
+      "last_customer_message_excerpt": "Customer: Haan, package corner crushed hai.",
+      "overall_extraction_confidence": "medium"
+    },
+    "images": [
+      {
+        "row_id": "user_029:case_029",
+        "image_id": "img_1",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_1.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_part": {
+          "value": "box",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_issue_type": {
+          "value": "none",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_1"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.191989Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:ddad715736bce79d05ef64794f46881c8f52ad22f9b4b142179a81d11422921f",
+        "injection_text_excerpt": null
+      },
+      {
+        "row_id": "user_029:case_029",
+        "image_id": "img_2",
+        "image_path": "D:\\multimodal-claim-review-system\\dataset\\images\\test\\case_029\\img_2.jpg",
+        "file_readable": true,
+        "usable_for_automated_review": true,
+        "depicts_claim_object": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_part": {
+          "value": "box",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "claimed_primary_part_visible": {
+          "value": true,
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_issue_type": {
+          "value": "none",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "visible_damage_extent": {
+          "value": "medium",
+          "confidence": "high",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_blurry": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_cropped_or_obstructed": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_low_light_or_glare": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_wrong_angle_for_claimed_part": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_non_original_image": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "is_possibly_manipulated": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "has_instruction_text": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "package_is_opened": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "contents_area_visible": {
+          "value": false,
+          "confidence": "low",
+          "confidence_score": null,
+          "source_module": "image_observer",
+          "source_image_id": "img_2"
+        },
+        "vehicle_identity_features": [],
+        "model_name": "mock-gemini-2.5-pro",
+        "prompt_version": "mock-vision-v1",
+        "observed_at": "2026-06-20T04:54:50.191989Z",
+        "observation_pass": 1,
+        "observation_raw_hash": "sha256:fce8d68328a2c5b37947183c120f520961b352a8607ad8642a29098c8664d76c",
+        "injection_text_excerpt": null
+      }
+    ],
+    "observation_complete": true,
+    "aggregated_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "claim_observation": {
+    "row_id": "user_029:case_029",
+    "alleged_parts": [
+      "package_corner"
+    ],
+    "alleged_issue_types": [
+      "crushed_packaging"
+    ],
+    "alleged_issue_families": [
+      "crushed_torn_seal"
+    ],
+    "exclusions": [],
+    "identity_constraint_active": {
+      "value": false,
+      "confidence": "low",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "identity_side": null,
+    "identity_color": null,
+    "claimed_damage_alleged": {
+      "value": true,
+      "confidence": "high",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "claimed_severity_language": {
+      "value": "medium",
+      "confidence": "medium",
+      "confidence_score": null,
+      "source_module": "claim_observer",
+      "source_image_id": null
+    },
+    "multi_part_detected": false,
+    "injection_detected_in_chat": false,
+    "injection_excerpt": null,
+    "sanitized_claim_excerpt": "Customer: Haan, package corner crushed hai.",
+    "model_name": "mock-gemini-2.5-flash",
+    "prompt_version": "mock-claim-v1",
+    "observation_raw_hash": "sha256:f4918b9990825efc5113b026c0fb519061627ad9593ab7182eb8803e0a8565ac",
+    "observed_at": "2026-06-20T04:54:50.191989Z",
+    "detected_languages": [
+      "en"
+    ],
+    "last_customer_message_excerpt": "Customer: Haan, package corner crushed hai.",
+    "overall_extraction_confidence": "medium"
+  },
+  "resolution": {
+    "row_id": "user_029:case_029",
+    "claim_observation_ref": "sha256:f4918b9990825efc5113b026c0fb519061627ad9593ab7182eb8803e0a8565ac",
+    "multi_part_claim": false,
+    "primary_object_part": "package_corner",
+    "primary_issue_family": "crushed_torn_seal",
+    "secondary_object_parts": [],
+    "resolution_method": "single_part",
+    "resolution_rule_ids": [
+      "MP-1",
+      "MP-2"
+    ],
+    "part_visibility_scores": {
+      "package_corner": 0
+    },
+    "resolved_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "consistency": {
+    "row_id": "user_029:case_029",
+    "image_count": 2,
+    "identity_conflict": false,
+    "identity_conflict_image_pairs": [],
+    "wrong_object_set": false,
+    "consistent_vehicle_features": true,
+    "best_part_image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.191989Z",
+    "consistency_notes": null
+  },
+  "validation": {
+    "row_id": "user_029:case_029",
+    "evidence_standard_met": true,
+    "triggered_rule_id": "ESM-R08",
+    "reason_template_key": "esm_r08_default_met",
+    "reason_template_vars": {
+      "part": "package_corner"
+    },
+    "active_requirement_ids": [
+      "REQ_GENERAL_OBJECT_PART",
+      "REQ_REVIEW_TRUST",
+      "REQ_PACKAGE_EXTERIOR",
+      "REQ_GENERAL_MULTI_IMAGE"
+    ],
+    "requirements_satisfied": {
+      "REQ_GENERAL_OBJECT_PART": true,
+      "REQ_REVIEW_TRUST": true,
+      "REQ_PACKAGE_EXTERIOR": true,
+      "REQ_GENERAL_MULTI_IMAGE": true
+    },
+    "predicates": {
+      "part_clear": true,
+      "no_part_visible": false,
+      "part_visible_low_only": false,
+      "identity_conflict": false,
+      "contents_claim": false,
+      "contents_area_clear": false,
+      "any_file_unreadable": false,
+      "best_part_confidence": "high",
+      "best_part_image_ids": [
+        "img_1",
+        "img_2"
+      ]
+    },
+    "evaluated_at": "2026-06-20T04:54:50.191989Z",
+    "identity_match_detail": null
+  },
+  "trust": {
+    "row_id": "user_029:case_029",
+    "valid_image": true,
+    "triggered_rule_id": "VI-R04",
+    "all_images_unusable": false,
+    "any_non_original_high": false,
+    "contents_unreviewable": false,
+    "trust_failure_image_ids": [],
+    "evaluated_at": "2026-06-20T04:54:50.191989Z",
+    "trust_failure_reason": null
+  },
+  "verdict": {
+    "row_id": "user_029:case_029",
+    "claim_status": "contradicted",
+    "claim_status_rule_id": "CS-R03",
+    "issue_type": "none",
+    "object_part": "box",
+    "decided_at": "2026-06-20T04:54:50.191989Z",
+    "contradiction_subtype": "absent_damage"
+  },
+  "severity_decision": {
+    "row_id": "user_029:case_029",
+    "severity": "none",
+    "severity_rule_id": "SV-R02",
+    "visible_damage_extent_source": "medium",
+    "source_image_id": "img_2",
+    "verdict_ref": "user_029:case_029:verdict:2026-06-20T04:54:50.191989+00:00",
+    "decided_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "supporting_decision": {
+    "row_id": "user_029:case_029",
+    "supporting_image_ids": [
+      "img_1",
+      "img_2"
+    ],
+    "supporting_image_rule_id": "SI-R07",
+    "excluded_image_ids": [],
+    "selection_rationale": "All images showing claimed part document intact seal or absent damage",
+    "verdict_ref": "user_029:case_029:verdict:2026-06-20T04:54:50.191989+00:00",
+    "decided_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "decision": {
+    "row_id": "user_029:case_029",
+    "verdict": {
+      "row_id": "user_029:case_029",
+      "claim_status": "contradicted",
+      "claim_status_rule_id": "CS-R03",
+      "issue_type": "none",
+      "object_part": "box",
+      "decided_at": "2026-06-20T04:54:50.191989Z",
+      "contradiction_subtype": "absent_damage"
+    },
+    "severity_decision": {
+      "row_id": "user_029:case_029",
+      "severity": "none",
+      "severity_rule_id": "SV-R02",
+      "visible_damage_extent_source": "medium",
+      "source_image_id": "img_2",
+      "verdict_ref": "user_029:case_029:verdict:2026-06-20T04:54:50.191989+00:00",
+      "decided_at": "2026-06-20T04:54:50.191989Z"
+    },
+    "supporting_decision": {
+      "row_id": "user_029:case_029",
+      "supporting_image_ids": [
+        "img_1",
+        "img_2"
+      ],
+      "supporting_image_rule_id": "SI-R07",
+      "excluded_image_ids": [],
+      "selection_rationale": "All images showing claimed part document intact seal or absent damage",
+      "verdict_ref": "user_029:case_029:verdict:2026-06-20T04:54:50.191989+00:00",
+      "decided_at": "2026-06-20T04:54:50.191989Z"
+    },
+    "evidence_standard_met": true,
+    "evidence_standard_met_reason": "The package_corner is visible and the claimed condition can be verified from the submitted image.",
+    "valid_image": true,
+    "claim_status_justification": "The image evidence contradicts the claim based on img_1, img_2.",
+    "composed_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "risk": {
+    "row_id": "user_029:case_029",
+    "risk_flags": [
+      "damage_not_visible",
+      "wrong_object_part"
+    ],
+    "flag_rule_hits": [
+      {
+        "flag": "wrong_object_part",
+        "rule_id": "wrong_object_part",
+        "trigger_image_ids": [
+          "img_2"
+        ],
+        "min_confidence_met": true
+      },
+      {
+        "flag": "damage_not_visible",
+        "rule_id": "damage_not_visible",
+        "trigger_image_ids": [
+          "img_2"
+        ],
+        "min_confidence_met": true
+      }
+    ],
+    "manual_review_required": false,
+    "manual_review_rule_ids": [],
+    "history_flags_input": [
+      "none"
+    ],
+    "evaluated_at": "2026-06-20T04:54:50.191989Z"
+  },
+  "rule_hits_ordered": [
+    {
+      "sequence": 1,
+      "stage": "resolve",
+      "rule_id": "MP-1",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "affirmed_parts": "package_corner",
+        "part_count": "1",
+        "justification": "Collected customer-affirmed parts from claim observation."
+      }
+    },
+    {
+      "sequence": 2,
+      "stage": "resolve",
+      "rule_id": "MP-2",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "primary_object_part": "package_corner",
+        "justification": "Single affirmed part selected as primary."
+      }
+    },
+    {
+      "sequence": 3,
+      "stage": "validation",
+      "rule_id": "ESM-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_file_unreadable": "false",
+        "justification": "Unreadable file prevents evidence evaluation."
+      }
+    },
+    {
+      "sequence": 4,
+      "stage": "validation",
+      "rule_id": "ESM-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_conflict": "false",
+        "justification": "Vehicle identity conflict across images."
+      }
+    },
+    {
+      "sequence": 5,
+      "stage": "validation",
+      "rule_id": "ESM-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "justification": "Claimed part not visible on any image."
+      }
+    },
+    {
+      "sequence": 6,
+      "stage": "validation",
+      "rule_id": "ESM-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_claim": "false",
+        "contents_area_clear": "false",
+        "justification": "Contents claim without visible contents area."
+      }
+    },
+    {
+      "sequence": 7,
+      "stage": "validation",
+      "rule_id": "ESM-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_visible_low_only": "false",
+        "justification": "Part visible only at low confidence without high-confidence image."
+      }
+    },
+    {
+      "sequence": 8,
+      "stage": "validation",
+      "rule_id": "ESM-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_clear": "true",
+        "justification": "Claimed primary part not clear enough for inspection."
+      }
+    },
+    {
+      "sequence": 9,
+      "stage": "validation",
+      "rule_id": "ESM-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "identity_constraint_active": "false",
+        "identity_matchable": "true",
+        "detail": "identity_constraint_inactive",
+        "justification": "Identity constraint satisfied or not active."
+      }
+    },
+    {
+      "sequence": 10,
+      "stage": "validation",
+      "rule_id": "ESM-R08",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "true",
+        "justification": "Default evidence sufficiency met; no higher-priority ESM rule matched."
+      }
+    },
+    {
+      "sequence": 11,
+      "stage": "trust",
+      "rule_id": "VI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "all_images_unusable": "false",
+        "justification": "All images unusable for automated review."
+      }
+    },
+    {
+      "sequence": 12,
+      "stage": "trust",
+      "rule_id": "VI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "any_non_original_high": "false",
+        "justification": "Non-original image detected at high confidence."
+      }
+    },
+    {
+      "sequence": 13,
+      "stage": "trust",
+      "rule_id": "VI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "contents_unreviewable": "false",
+        "justification": "Contents reviewability check passed."
+      }
+    },
+    {
+      "sequence": 14,
+      "stage": "trust",
+      "rule_id": "VI-R04",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "valid_image": "true",
+        "justification": "Default valid_image=true; no trust failure rule matched."
+      }
+    },
+    {
+      "sequence": 15,
+      "stage": "verdict",
+      "rule_id": "CS-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "evidence_standard_met": "true",
+        "justification": "Evidence standard met; CS-R01 does not apply."
+      }
+    },
+    {
+      "sequence": 16,
+      "stage": "verdict",
+      "rule_id": "CS-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "justification": "CS-R02 condition not met."
+      }
+    },
+    {
+      "sequence": 17,
+      "stage": "verdict",
+      "rule_id": "CS-R03",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "part_clear": "true",
+        "justification": "Claimed part visible but no damage seen."
+      }
+    },
+    {
+      "sequence": 18,
+      "stage": "severity",
+      "rule_id": "SV-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 19,
+      "stage": "severity",
+      "rule_id": "SV-R02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "none",
+        "justification": "Issue type none maps severity to none."
+      }
+    },
+    {
+      "sequence": 20,
+      "stage": "severity",
+      "rule_id": "SV-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match high."
+      }
+    },
+    {
+      "sequence": 21,
+      "stage": "severity",
+      "rule_id": "SV-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match low."
+      }
+    },
+    {
+      "sequence": 22,
+      "stage": "severity",
+      "rule_id": "SV-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match medium."
+      }
+    },
+    {
+      "sequence": 23,
+      "stage": "severity",
+      "rule_id": "SV-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "source_image_id": "img_2",
+        "justification": "Extent medium does not match none."
+      }
+    },
+    {
+      "sequence": 24,
+      "stage": "severity",
+      "rule_id": "SV-R07",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "visible_damage_extent": "medium",
+        "justification": "SV-R07 requires supported status with unknown extent."
+      }
+    },
+    {
+      "sequence": 25,
+      "stage": "severity",
+      "rule_id": "SV-R08",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_damage_extent": "medium",
+        "justification": "SV-R08 conditions not met."
+      }
+    },
+    {
+      "sequence": 26,
+      "stage": "supporting",
+      "rule_id": "SI-R01",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 27,
+      "stage": "supporting",
+      "rule_id": "SI-R02",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Claim status is not NEI."
+      }
+    },
+    {
+      "sequence": 28,
+      "stage": "supporting",
+      "rule_id": "SI-R03",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Contradicted claim; SI-R03 does not apply."
+      }
+    },
+    {
+      "sequence": 29,
+      "stage": "supporting",
+      "rule_id": "SI-R04",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Contradicted claim; SI-R04 does not apply."
+      }
+    },
+    {
+      "sequence": 30,
+      "stage": "supporting",
+      "rule_id": "SI-R06",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Not a wrong-object contradiction."
+      }
+    },
+    {
+      "sequence": 31,
+      "stage": "supporting",
+      "rule_id": "SI-R07",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "selected": "img_1;img_2",
+        "justification": "Absent-damage contradiction with multiple angles showing claimed part."
+      }
+    },
+    {
+      "sequence": 32,
+      "stage": "supporting",
+      "rule_id": "SI-R05",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "Multi-angle absent-damage handled by SI-R07."
+      }
+    },
+    {
+      "sequence": 33,
+      "stage": "risk",
+      "rule_id": "blurry_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No blurry_image."
+      }
+    },
+    {
+      "sequence": 34,
+      "stage": "risk",
+      "rule_id": "cropped_or_obstructed",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No cropped_or_obstructed."
+      }
+    },
+    {
+      "sequence": 35,
+      "stage": "risk",
+      "rule_id": "low_light_or_glare",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No low_light_or_glare."
+      }
+    },
+    {
+      "sequence": 36,
+      "stage": "risk",
+      "rule_id": "wrong_angle",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No wrong-angle risk."
+      }
+    },
+    {
+      "sequence": 37,
+      "stage": "risk",
+      "rule_id": "wrong_object",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "wrong_object_set": "false",
+        "identity_conflict": "false",
+        "justification": "Claim object consistent across images."
+      }
+    },
+    {
+      "sequence": 38,
+      "stage": "risk",
+      "rule_id": "wrong_object_part",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "visible_part": "box",
+        "primary_object_part": "package_corner",
+        "justification": "Visible part differs from resolved primary part."
+      }
+    },
+    {
+      "sequence": 39,
+      "stage": "risk",
+      "rule_id": "damage_not_visible",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "no_part_visible": "false",
+        "part_clear": "true",
+        "justification": "Claimed damage not visible on submitted images."
+      }
+    },
+    {
+      "sequence": 40,
+      "stage": "risk",
+      "rule_id": "claim_mismatch",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status_rule_id": "CS-R03",
+        "justification": "Claim mismatch flag not triggered."
+      }
+    },
+    {
+      "sequence": 41,
+      "stage": "risk",
+      "rule_id": "non_original_image",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No non_original_image."
+      }
+    },
+    {
+      "sequence": 42,
+      "stage": "risk",
+      "rule_id": "possible_manipulation",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No possible_manipulation."
+      }
+    },
+    {
+      "sequence": 43,
+      "stage": "risk",
+      "rule_id": "text_instruction_present",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "trigger_image_ids": "none",
+        "justification": "No text_instruction_present."
+      }
+    },
+    {
+      "sequence": 44,
+      "stage": "risk",
+      "rule_id": "user_history_risk",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "history_flags": "none",
+        "justification": "No user history risk flag."
+      }
+    },
+    {
+      "sequence": 45,
+      "stage": "risk",
+      "rule_id": "MRR-1",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-1 not matched."
+      }
+    },
+    {
+      "sequence": 46,
+      "stage": "risk",
+      "rule_id": "MRR-2",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-2 not matched."
+      }
+    },
+    {
+      "sequence": 47,
+      "stage": "risk",
+      "rule_id": "MRR-3",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-3 not matched."
+      }
+    },
+    {
+      "sequence": 48,
+      "stage": "risk",
+      "rule_id": "MRR-4",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-4 not matched."
+      }
+    },
+    {
+      "sequence": 49,
+      "stage": "risk",
+      "rule_id": "MRR-5",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-5 not matched."
+      }
+    },
+    {
+      "sequence": 50,
+      "stage": "risk",
+      "rule_id": "MRR-6",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "justification": "MRR-6 not matched."
+      }
+    },
+    {
+      "sequence": 51,
+      "stage": "risk",
+      "rule_id": "manual_review_required",
+      "matched": false,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "manual_review_rule_ids": "none",
+        "justification": "Manual review not required."
+      }
+    },
+    {
+      "sequence": 52,
+      "stage": "compose",
+      "rule_id": "CMP-HR01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "evidence_standard_met": "true",
+        "justification": "HR-01 evidence standard and claim status are consistent."
+      }
+    },
+    {
+      "sequence": 53,
+      "stage": "compose",
+      "rule_id": "CMP-HR03",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "severity": "none",
+        "justification": "HR-03 NEI severity consistency satisfied."
+      }
+    },
+    {
+      "sequence": 54,
+      "stage": "compose",
+      "rule_id": "CMP-SV02",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "issue_type": "none",
+        "justification": "SV-02 issue_type none requires severity none."
+      }
+    },
+    {
+      "sequence": 55,
+      "stage": "compose",
+      "rule_id": "CMP-RISK01",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "claim_status": "contradicted",
+        "risk_flag_count": "2",
+        "justification": "Risk assessment did not modify verdict claim_status."
+      }
+    },
+    {
+      "sequence": 56,
+      "stage": "compose",
+      "rule_id": "CMP-COMPOSE",
+      "matched": true,
+      "inputs_snapshot": {},
+      "outputs_snapshot": {
+        "row_id": "user_029:case_029",
+        "reason_key": "esm_r08_default_met",
+        "justification": "ClaimDecision composed from stage outputs."
+      }
+    }
+  ],
+  "started_at": "2026-06-20T04:54:50.191989Z",
+  "completed_at": "2026-06-20T04:54:50.191989Z",
+  "deterministic_hash": "sha256:a6a284e2abd2d4043cd7c5f30f3cd07c2938b4fc0d6b15840ed7c42f02784300",
+  "model_call_counts": {
+    "claim_observer": 1,
+    "image_observer": 2
+  },
+  "token_usage": null
+}
